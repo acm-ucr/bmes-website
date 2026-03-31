@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@theme {
+  --color-bmes-blue-100: #031c48;
+  --color-bmes-blue-200: #003067;
+  --color-bmes-blue-300: #579ae8;
+
+  --color-bmes-gray-100: #8fa2bd;
+  --color-bmes-gray-200: #eaf1f7;
+}
