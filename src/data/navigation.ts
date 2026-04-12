@@ -1,8 +1,9 @@
 export const header_items = [
-    { name: 'Home', link: '/home'},
-    { name: 'About', link: '/about'},
-    { name: 'Board', link: '/board'},
-    { name: 'Mentorship', link: '/mentorship'},
-    { name: 'Gallery', link: '/gallery'},
-    { name: 'Contact', link: '/contact'},
+    { name: 'BIOMEDICAL ENGINEERING SOCIETY', link: '/'},
+    { name: 'ABOUT US', link: '/about'},
+    { name: 'EVENTS', link: '/events'},
+    { name: 'BOARD', link: '/board'},
+    { name: 'MENTORSHIP', link: '/mentorship'},
+    { name: 'GALLERY', link: '/gallery'},
+    { name: 'CONTACT US', link: '/contact'},
 ]
