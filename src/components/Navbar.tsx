@@ -5,7 +5,7 @@ import Image from "next/image";
 const Navbar = () => {
     return (
         <>
-        <div className="flex items-center justify-between p-4 bg-bmes-blue-100 text-white">
+        <div className="flex items-center justify-between p-5 bg-bmes-blue-100 text-white">
             <Link href={header_items[0].link} className="flex flex-row items-center gap-2">
                 <Image src="/BMES_logo.png" alt="BMES Logo" width={40} height={40} />
                 <div className="flex flex-col">
@@ -29,7 +29,7 @@ const Navbar = () => {
             <Link href={header_items[5].link}>
                 {header_items[5].name}
             </Link>
-            <Link href={header_items[6].link}>
+            <Link href={header_items[6].link} className="bg-bmes-blue-300 px-4 py-2 rounded-2xl">
                 {header_items[6].name}
             </Link>
         </div>
