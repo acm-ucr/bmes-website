@@ -12,7 +12,7 @@ const Navbar = () => {
             className="flex flex-row items-center gap-2"
           >
             <Image
-              src="/BMES_logo.png"
+              src="/BMES_logo.webp"
               alt="BMES Logo"
               width={40}
               height={40}
