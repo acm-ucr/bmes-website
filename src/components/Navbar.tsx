@@ -5,9 +5,14 @@ import Image from "next/image";
 const Navbar = () => {
     return (
         <>
-        <div className="flex items-center justify-between p-4">
-            <Link href={header_items[0].link}>
-                {header_items[0].name}
+        <div className="flex items-center justify-between p-4 bg-bmes-blue-100 text-white">
+            <Link href={header_items[0].link} className="flex flex-row items-center gap-2">
+                <Image src="/BMES_logo.png" alt="BMES Logo" width={40} height={40} />
+                <div className="flex flex-col">
+                    <span>BIOMEDICAL</span>
+                    <span>ENGINEERING</span>
+                    <span>SOCIETY</span>
+                </div>
             </Link>
             <Link href={header_items[1].link}>
                 {header_items[1].name}
