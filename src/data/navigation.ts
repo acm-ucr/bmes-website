@@ -1,4 +1,9 @@
-export const header_items = [
+interface NavLink {
+  name: string;
+  link: string;
+}
+
+export const header_items: NavLink[] = [
   { name: "BIOMEDICAL ENGINEERING SOCIETY", link: "/" },
   { name: "ABOUT US", link: "/about" },
   { name: "EVENTS", link: "/events" },
