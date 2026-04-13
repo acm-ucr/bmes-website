@@ -3,7 +3,7 @@ interface NavLink {
   link: string;
 }
 
-export const header_items: NavLink[] = [
+export const navigations: NavLink[] = [
   { name: "BIOMEDICAL ENGINEERING SOCIETY", link: "/" },
   { name: "ABOUT US", link: "/about" },
   { name: "EVENTS", link: "/events" },
