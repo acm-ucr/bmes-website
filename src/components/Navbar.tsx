@@ -31,20 +31,6 @@ const Navbar = () => {
             CONTACT US
           </Link>
         </div>
-
-        {/* <div className="flex items-center gap-8 pr-10 text-lg">
-          <Link href={navigations[1].link}>{navigations[1].name}</Link>
-          <Link href={navigations[2].link}>{navigations[2].name}</Link>
-          <Link href={navigations[3].link}>{navigations[3].name}</Link>
-          <Link href={navigations[4].link}>{navigations[4].name}</Link>
-          <Link href={navigations[5].link}>{navigations[5].name}</Link>
-          <Link
-            href={navigations[6].link}
-            className="bg-bmes-blue-300 rounded-2xl px-4 py-2"
-          >
-            {navigations[6].name}
-          </Link>
-        </div> */}
       </div>
     </>
   );
