@@ -19,7 +19,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-8 pr-10 text-lg">
-          {navigations.slice(1, 6).map(({ link, name }, index) => (
+          {navigations.map(({ link, name }, index) => (
             <Link key={index} href={link}>
               {name}
             </Link>
