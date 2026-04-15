@@ -1,4 +1,5 @@
 import "./globals.css";
+import Footer from "@/components/Footer";
 import { Inter } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
 import Navbar from "@/components/Navbar";
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: LayoutProps) {
       <body className={inter.className}>
         <Navbar />
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
+        <Footer />
       </body>
     </html>
   );
