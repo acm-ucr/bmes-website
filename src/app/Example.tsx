@@ -4,7 +4,7 @@ interface ExampleProps {
   text3: string;
   text4: string;
 }
-const Example = ({text1, text2, text3, text4}: ExampleProps) => {
+const Example = ({ text1, text2, text3, text4 }: ExampleProps) => {
   return (
     <div className="bg-bmes-blue-100 flex w-2/3 flex-col items-center gap-4 justify-self-center rounded p-8">
       <div className="bg-bmes-blue-200 w-full p-5 text-center text-xl text-white">
@@ -25,4 +25,3 @@ const Example = ({text1, text2, text3, text4}: ExampleProps) => {
   );
 };
 export default Example;
-
