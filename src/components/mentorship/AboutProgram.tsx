@@ -22,34 +22,32 @@ const AboutProgram = ({
   contactEmail,
 }: AboutProgramProps) => {
   return (
-    <section className="relative bg-bmes-gray-200 flex flex-col items-center px-8 py-20 text-center overflow-hidden">
+    <section className="bg-bmes-gray-200 relative flex flex-col items-center overflow-hidden px-8 py-20 text-center">
+      {/* The three background gears */}
 
-
-{/* The three background gears */}
-
-<img
-  src="/gear.svg"
-  alt=""
-  className="absolute -left-65 -bottom-35 w-[550px] opacity-20 z-0 pointer-events-none"
-/>
-<img
-  src="/gear.svg"
-  alt=""
-  className="absolute -right-25 -top-6 w-[300px] opacity-20 z-0 pointer-events-none"
-/>
-<img
-  src="/gear.svg"
-  alt=""
-  className="absolute -right-16 bottom-0 w-[390px] opacity-20 z-0 pointer-events-none"
-/>
+      <img
+        src="/gear.svg"
+        alt=""
+        className="pointer-events-none absolute -bottom-35 -left-65 z-0 w-[550px] opacity-20"
+      />
+      <img
+        src="/gear.svg"
+        alt=""
+        className="pointer-events-none absolute -top-6 -right-25 z-0 w-[300px] opacity-20"
+      />
+      <img
+        src="/gear.svg"
+        alt=""
+        className="pointer-events-none absolute -right-16 bottom-0 z-0 w-[390px] opacity-20"
+      />
 
       {/* Title */}
-      <h1 className="text-4xl font-semibold text-bmes-blue-200 mb-6 z-10">
+      <h1 className="text-bmes-blue-200 z-10 mb-6 text-4xl font-semibold">
         {title}
       </h1>
 
       {/* Description */}
-      <p className="max-w-3xl text-lg leading-8 text-black z-10">
+      <p className="z-10 max-w-3xl text-lg leading-8 text-black">
         {description}{" "}
         <Link href={linkHref} className="text-bmes-blue-300 underline">
           {linkText}
@@ -62,18 +60,18 @@ const AboutProgram = ({
       </p>
 
       {/* Subtext */}
-      <p className="mt-6 text-lg z-10">{subtext}</p>
+      <p className="z-10 mt-6 text-lg">{subtext}</p>
 
       {/* Button */}
       <Link
-  href={buttonHref}
-  className="mt-4 rounded-xl bg-bmes-blue-300 px-10 py-4 text-2xl font-bold text-white shadow-md hover:scale-105 transition z-10 underline"
->
-  {buttonText}
-</Link>
+        href={buttonHref}
+        className="bg-bmes-blue-300 z-10 mt-4 rounded-xl px-10 py-4 text-2xl font-bold text-white underline shadow-md transition hover:scale-105"
+      >
+        {buttonText}
+      </Link>
 
       {/* Contact INfo*/}
-      <p className="mt-8 text-lg z-10">
+      <p className="z-10 mt-8 text-lg">
         For more information, please contact{" "}
         <Link
           href={`mailto:${contactEmail}`}
@@ -85,7 +83,7 @@ const AboutProgram = ({
       </p>
 
       {/* Bottom blue bar */}
-      <div className="absolute bottom-0 left-0 w-full h-2 bg-bmes-blue-200" />
+      <div className="bg-bmes-blue-200 absolute bottom-0 left-0 h-2 w-full" />
     </section>
   );
 };
