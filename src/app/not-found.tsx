@@ -7,12 +7,12 @@ import Image from "next/image";
 const NotFound = () => {
   return (
     <>
-      <div className="relative flex min-h-[87vh] flex-col items-center justify-center">
+      <div className="relative flex min-h-[87vh] flex-col items-center justify-center -z-100">
         <Image src={gear_1} alt="gear" className="absolute top-0 left-0 z-0" />
         <Image
           src={gear_2}
           alt="gear"
-          className="absolute right-107 bottom-0 z-0"
+          className="absolute right-1/2 bottom-0 z-0"
         />
         <Image
           src={gear_3}
@@ -21,7 +21,7 @@ const NotFound = () => {
         />
         <div className="relative z-10 flex flex-col items-center">
           <p className="text-bmes-blue-200 mb-2 text-9xl font-bold">404</p>
-          <h1 className="mb-2 text-3xl font-light">Page Not Found</h1>
+          <p className="mb-2 text-3xl font-light">Page Not Found</p>
           <Link
             href="/"
             className="bg-bmes-blue-300 rounded-2xl px-4 py-2 text-white shadow-lg"
