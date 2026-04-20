@@ -7,7 +7,7 @@ import Image from "next/image";
 const NotFound = () => {
   return (
     <>
-      <div className="relative flex min-h-[87vh] flex-col items-center justify-center -z-100">
+      <div className="relative -z-100 flex min-h-[87vh] flex-col items-center justify-center">
         <Image src={gear_1} alt="gear" className="absolute top-0 left-0 z-0" />
         <Image
           src={gear_2}
