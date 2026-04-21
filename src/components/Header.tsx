@@ -1,20 +1,26 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
-type HeaderProps = {
+interface HeaderProps {
   title: string;
-  image: string;
-};
+  image: StaticImageData;
+  subtitle?: string;
+}
 
-export default function Header({ title, image }: HeaderProps) {
+const Header = ({ title, image, subtitle }: HeaderProps) => {
   return (
     <div className="relative h-screen w-screen">
       <div className="relative h-2/5 w-full">
         <Image src={image} alt={title} fill className="object-cover" />
-        <div className="bg-bmes-blue-200/45 absolute inset-0" />
         <div className="absolute inset-0 flex items-center justify-center text-center">
-          <div className="text-6xl font-light text-white">{title}</div>
+          <div className="flex flex-col text-7xl font-light text-white">
+            {title}
+            <div className="mt-5 text-5xl font-light text-white">
+              {subtitle}
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
-}
+};
+export default Header;
