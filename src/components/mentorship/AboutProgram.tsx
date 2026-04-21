@@ -29,14 +29,16 @@ const AboutProgram = () => {
       </div>
 
       <p className="z-10 max-w-3xl text-lg leading-8 text-black">
-        The Bioengineering Mentorship Program was established in conjunction with the{" "}
+        The Bioengineering Mentorship Program was established in conjunction
+        with the{" "}
         <a
           href="https://biggsa.engr.ucr.edu/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-bmes-blue-300 underline"
         >
-          Bioengineering Interdepartmental Graduate Student Association (BIG-GSA)
+          Bioengineering Interdepartmental Graduate Student Association
+          (BIG-GSA)
         </a>{" "}
         to promote better interdepartmental relations in bioengineering.
         Undergraduate students are paired with a graduate or senior level
