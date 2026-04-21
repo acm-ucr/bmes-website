@@ -1,4 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
+
+import GearBottomRight from "@/public/gears/gear-bottom-right.svg"
+import GearTopRight from "@/public/gears/gear-top-right.svg"
+import GearLeft from "@/public/gears/gear-left.svg"
 
 interface AboutProgramProps {
   title: string;
@@ -22,31 +27,28 @@ const AboutProgram = ({
   contactEmail,
 }: AboutProgramProps) => {
   return (
-    <section className="bg-bmes-gray-200 relative flex flex-col items-center overflow-hidden px-8 py-20 text-center">
-      {/* The three background gears */}
+    <section className="relative flex flex-col items-center overflow-hidden px-8 py-20 text-center">
 
-      <img
-        src="/gear.svg"
-        alt=""
-        className="pointer-events-none absolute -bottom-35 -left-65 z-0 w-[550px] opacity-20"
-      />
-      <img
-        src="/gear.svg"
-        alt=""
-        className="pointer-events-none absolute -top-6 -right-25 z-0 w-[300px] opacity-20"
-      />
-      <img
-        src="/gear.svg"
-        alt=""
-        className="pointer-events-none absolute -right-16 bottom-0 z-0 w-[390px] opacity-20"
-      />
+<Image
+  src={GearLeft}
+  alt="Decorative gear on the left side"
+  className="pointer-events-none absolute -bottom-[80px] left-[0px] z-0 opacity-70"
+/>
+<Image
+  src={GearTopRight}
+  alt="Decorative gear on the top right side"
+  className="pointer-events-none absolute -top-[20px] -right-[15px] z-0 opacity-70"
+/>
+<Image
+  src= {GearBottomRight}
+  alt="Decorative gear on the bottom right side"
+  className="pointer-events-none absolute bottom-[10px] right-[0px] z-0 opacity-70"
+/>
 
-      {/* Title */}
       <h1 className="text-bmes-blue-200 z-10 mb-6 text-4xl font-semibold">
         {title}
       </h1>
 
-      {/* Description */}
       <p className="z-10 max-w-3xl text-lg leading-8 text-black">
         {description}{" "}
         <Link href={linkHref} className="text-bmes-blue-300 underline">
@@ -59,10 +61,8 @@ const AboutProgram = ({
         and how to apply for professional positions.
       </p>
 
-      {/* Subtext */}
       <p className="z-10 mt-6 text-lg">{subtext}</p>
 
-      {/* Button */}
       <Link
         href={buttonHref}
         className="bg-bmes-blue-300 z-10 mt-4 rounded-xl px-10 py-4 text-2xl font-bold text-white underline shadow-md transition hover:scale-105"
@@ -70,7 +70,6 @@ const AboutProgram = ({
         {buttonText}
       </Link>
 
-      {/* Contact INfo*/}
       <p className="z-10 mt-8 text-lg">
         For more information, please contact{" "}
         <Link
@@ -82,7 +81,6 @@ const AboutProgram = ({
         .
       </p>
 
-      {/* Bottom blue bar */}
       <div className="bg-bmes-blue-200 absolute bottom-0 left-0 h-2 w-full" />
     </section>
   );
