@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import GearBottomRight from "@/public/gears/gear-bottom-right.svg"
-import GearTopRight from "@/public/gears/gear-top-right.svg"
-import GearLeft from "@/public/gears/gear-left.svg"
+import GearBottomRight from "@/public/gears/gear-bottom-right.svg";
+import GearTopRight from "@/public/gears/gear-top-right.svg";
+import GearLeft from "@/public/gears/gear-left.svg";
 
 interface AboutProgramProps {
   title: string;
@@ -28,22 +28,21 @@ const AboutProgram = ({
 }: AboutProgramProps) => {
   return (
     <section className="relative flex flex-col items-center overflow-hidden px-8 py-20 text-center">
-
-<Image
-  src={GearLeft}
-  alt="Decorative gear on the left side"
-  className="pointer-events-none absolute -bottom-[80px] left-[0px] z-0 opacity-70"
-/>
-<Image
-  src={GearTopRight}
-  alt="Decorative gear on the top right side"
-  className="pointer-events-none absolute -top-[20px] -right-[15px] z-0 opacity-70"
-/>
-<Image
-  src= {GearBottomRight}
-  alt="Decorative gear on the bottom right side"
-  className="pointer-events-none absolute bottom-[10px] right-[0px] z-0 opacity-70"
-/>
+      <Image
+        src={GearLeft}
+        alt="Decorative gear on the left side"
+        className="pointer-events-none absolute -bottom-[80px] left-[0px] z-0 opacity-70"
+      />
+      <Image
+        src={GearTopRight}
+        alt="Decorative gear on the top right side"
+        className="pointer-events-none absolute -top-[20px] -right-[15px] z-0 opacity-70"
+      />
+      <Image
+        src={GearBottomRight}
+        alt="Decorative gear on the bottom right side"
+        className="pointer-events-none absolute right-[0px] bottom-[10px] z-0 opacity-70"
+      />
 
       <h1 className="text-bmes-blue-200 z-10 mb-6 text-4xl font-semibold">
         {title}
