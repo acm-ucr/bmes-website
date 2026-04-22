@@ -1,5 +1,7 @@
-const Mentorship = () => {
-  return <div>Mentorship</div>;
+import AboutProgram from "@/components/mentorship/AboutProgram";
+
+const Page = () => {
+  return <AboutProgram />;
 };
 
-export default Mentorship;
+export default Page;
