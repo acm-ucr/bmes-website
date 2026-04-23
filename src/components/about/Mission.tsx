@@ -5,7 +5,7 @@ import gear3 from "@/public/mission/gear-3.svg";
 
 const Mission = () => {
   return (
-    <div className="relative h-[60vh] w-full overflow-hidden bg-white px-4">
+    <div className="relative w-full overflow-hidden bg-white px-4 h-[60vh] flex items-center justify-center">
       <Image
         src={gear1}
         alt="Decorative gear in the top left corner"
@@ -42,3 +42,7 @@ const Mission = () => {
 };
 
 export default Mission;
+
+
+
+
