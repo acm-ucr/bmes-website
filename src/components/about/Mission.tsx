@@ -1,47 +1,34 @@
-// src/components/about/Mission.tsx
-// Called in: src/app/about/page.tsx
-
 import Image from "next/image";
+import gear1 from "@/public/mission/gear-1.svg";
+import gear2 from "@/public/mission/gear-2.svg";
+import gear3 from "@/public/mission/gear-3.svg";
 
 const Mission = () => {
   return (
-    <section className="relative w-full overflow-hidden bg-white px-6 py-16">
-      {/* Top-left gear */}
+    <div className="relative h-[60vh] w-full overflow-hidden bg-white px-4">
       <Image
-        src="/gear1/Vector1.svg"
-        alt=""
+        src={gear1}
+        alt="Decorative gear in the top left corner"
         aria-hidden="true"
-        width={200}
-        height={200}
-        className="pointer-events-none absolute -top-6 -left-6 z-0 select-none"
+        className="pointer-events-none absolute top-0 left-0 z-0 h-36 w-36"
       />
-
-      {/* Bottom-right large gear */}
       <Image
-        src="/gear2/Vector2.svg"
-        alt=""
+        src={gear2}
+        alt="Large decorative gear in the bottom right corner"
         aria-hidden="true"
-        width={224}
-        height={224}
-        className="pointer-events-none absolute -right-6 -bottom-6 z-0 select-none"
+        className="pointer-events-none absolute right-0 bottom-0 z-0 h-48 w-48"
       />
-
-      {/* Bottom-right small gear */}
       <Image
-        src="/gear3/Vector3.svg"
-        alt=""
+        src={gear3}
+        alt="Small decorative gear near the bottom right"
         aria-hidden="true"
-        width={112}
-        height={112}
-        className="pointer-events-none absolute right-32 bottom-4 z-0 select-none"
+        className="pointer-events-none absolute right-1/3 bottom-0 z-0 h-24 w-24"
       />
-
-      {/* Content */}
-      <div className="relative z-10 mx-auto max-w-2xl text-center">
-        <h2 className="mb-4 text-2xl font-semibold tracking-wide text-[#2E5FA3]">
+      <div className="relative z-10 mx-auto max-w-4xl text-center">
+        <div className="text-bmes-blue-200 mb-4 text-3xl">
           Mission Statement
-        </h2>
-        <p className="text-sm leading-relaxed text-gray-700">
+        </div>
+        <p className="text-bmes-blue-100 text-lg">
           The Mission of the BMES is to build and support the biomedical
           engineering community, locally, nationally, and internationally, with
           activities designed to communicate recent advances, discoveries, and
@@ -50,7 +37,7 @@ const Mission = () => {
           business sectors.
         </p>
       </div>
-    </section>
+    </div>
   );
 };
 

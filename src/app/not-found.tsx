@@ -1,7 +1,7 @@
 import Link from "next/link";
-import gear_1 from "@/public/404-gears/gear-1.svg";
-import gear_2 from "@/public/404-gears/gear-2.svg";
-import gear_3 from "@/public/404-gears/gear-3.svg";
+import gear_1 from "@/public/mission/gear-1.svg";
+import gear_2 from "@/public/mission/gear-2.svg";
+import gear_3 from "@/public/mission/gear-3.svg";
 import Image from "next/image";
 
 const NotFound = () => {
