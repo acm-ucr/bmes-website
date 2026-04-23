@@ -31,19 +31,21 @@ const BoardCard = ({ name, image, position, emailLink }: CardInfo) => {
         {position}
       </div>
 
-      <button
-        type="button"
-        className="border-bmes-blue-300 text-bmes-blue-300 mt-4 rounded-xl border-2 px-4 py-3 text-xl font-light uppercase"
-      >
-        About Me
-      </button>
+      <div>
+        <button
+          type="button"
+          className="border-bmes-blue-300 text-bmes-blue-300 mt-4 rounded-xl border-2 px-4 py-3 text-xl font-light uppercase"
+        >
+          About Me
+        </button>
+      </div>
 
       <Link
         href={emailLink}
         aria-label={`Email ${name}`}
-        className="bg-bmes-blue-300 mt-6 flex h-20 w-20 items-center justify-center rounded-3xl shadow-md"
+        className="bg-bmes-blue-300 mt-6 flex items-center justify-center rounded-3xl p-4 shadow-md"
       >
-        <HiOutlineMail className="h-15 w-15 text-white" />
+        <HiOutlineMail className="text-4xl text-white" />
       </Link>
     </div>
   );
