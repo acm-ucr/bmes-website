@@ -60,7 +60,7 @@ const Navbar = () => {
               className={`${
                 pathName === link
                   ? "text-bmes-blue-200 flex h-16 w-screen items-center justify-center bg-white"
-                  : "no-underline"
+                  : ""
               }`}
             >
               {name}
