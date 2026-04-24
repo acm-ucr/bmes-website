@@ -1,12 +1,12 @@
 import Header from "@/components/Header";
 import BoardHeader from "@/public/boardHeader.webp";
-import Vision from "@/components/about/Vision"
+import Vision from "@/components/about/Vision";
 
 const About = () => {
   return (
     <div>
       <Header title="Executive Board" subtitle="25-26" image={BoardHeader} />
-      <Vision/>
+      <Vision />
     </div>
   );
 };
