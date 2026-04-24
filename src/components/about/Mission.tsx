@@ -28,7 +28,7 @@ const Mission = () => {
         <div className="text-bmes-blue-200 mb-4 text-5xl">
           Mission Statement
         </div>
-        <p className="text-2xl pt-6">
+        <p className="pt-6 text-2xl">
           The Mission of the BMES is to build and support the biomedical
           engineering community, locally, nationally, and internationally, with
           activities designed to communicate recent advances, discoveries, and
@@ -42,6 +42,3 @@ const Mission = () => {
 };
 
 export default Mission;
-
-
-
