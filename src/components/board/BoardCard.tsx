@@ -14,17 +14,7 @@ interface CardInfo {
 const BoardCard = ({ name, image, position, emailLink }: CardInfo) => {
   return (
     <div className="flex flex-col items-center text-center">
-      <div className="h-48 w-48 rounded-full bg-white shadow-xl">
-        <div className="relative h-full w-full overflow-hidden rounded-full">
-          <Image
-            src={image}
-            alt={name}
-            fill
-            className="scale-125 object-cover"
-          />
-        </div>
-      </div>
-
+      <Image src={image} alt={name} />
       <div className="mt-4 text-2xl text-black">{name}</div>
 
       <div className="text-bmes-gray-100 mt-2 text-lg font-light uppercase">
