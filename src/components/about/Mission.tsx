@@ -13,13 +13,13 @@ const Mission = () => {
         className="pointer-events-none absolute top-0 left-0 z-0"
       />
       <Image
-        src={gear2}
+        src={gear3}
         alt="Large decorative gear in the bottom right corner"
         aria-hidden="true"
         className="pointer-events-none absolute right-0 bottom-0 z-0"
       />
       <Image
-        src={gear3}
+        src={gear2}
         alt="Small decorative gear near the bottom right"
         aria-hidden="true"
         className="pointer-events-none absolute right-1/3 bottom-0 z-0"
