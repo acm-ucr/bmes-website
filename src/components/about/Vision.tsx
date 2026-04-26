@@ -1,8 +1,6 @@
 const Vision = () => {
   return (
-    <div
-className="flex w-full flex-col items-center justify-center px-10 h-[80vh] bg-linear-to-b from-bmes-blue-300 to-bmes-blue-200"
-    >
+    <div className="from-bmes-blue-300 to-bmes-blue-200 flex h-[80vh] w-full flex-col items-center justify-center bg-linear-to-b px-10">
       <div className="mb-6 text-5xl text-white">Our Vision</div>
       <p className="mb-5 w-3/4 text-center text-2xl text-white">
         The vision of the Biomedical Engineering Society (BMES) is to serve as
