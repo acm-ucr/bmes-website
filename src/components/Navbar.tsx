@@ -5,7 +5,8 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import BMES_logo from "@/public/BMES_logo.svg";
-import { Menu, X } from "lucide-react";
+import { IoMdMenu } from "react-icons/io";
+import { IoMdClose } from "react-icons/io";
 import { usePathname } from "next/navigation";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +17,7 @@ const Navbar = () => {
         <div>
           <Link href="/" className="flex items-center gap-2">
             <Image src={BMES_logo} alt="BMES Logo" />
-            <div className="flex flex-col">
+            <div className="flex flex-col text-sm md:text-lg">
               <span>BIOMEDICAL</span>
               <span>ENGINEERING</span>
               <span>SOCIETY</span>
@@ -29,9 +30,9 @@ const Navbar = () => {
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (
-            <X className="h-12 w-12" />
+            <IoMdClose className="h-12 w-12" />
           ) : (
-            <Menu className="h-12 w-12" />
+            <IoMdMenu className="h-12 w-12" />
           )}
         </div>
 
@@ -51,15 +52,15 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="bg-bmes-blue-100 flex flex-col items-center gap-6 px-6 pb-6 text-2xl text-white lg:hidden">
+        <div className="bg-bmes-blue-100 flex flex-col items-center px-6 pb-6 text-2xl text-white lg:hidden">
           {navigations.map(({ link, name }, index) => (
             <Link
               key={index}
               href={link}
               onClick={() => setIsOpen(false)}
-              className={`${
+              className={`py-4 ${
                 pathName === link
-                  ? "text-bmes-blue-200 flex h-16 w-screen items-center justify-center bg-white"
+                  ? "text-bmes-blue-200 flex w-screen items-center justify-center bg-white"
                   : ""
               }`}
             >
@@ -69,7 +70,7 @@ const Navbar = () => {
           <Link
             href="/contact"
             onClick={() => setIsOpen(false)}
-            className="bg-bmes-blue-300 rounded-2xl px-4 py-2"
+            className="bg-bmes-blue-300 mt-4 rounded-2xl px-4 py-2"
           >
             CONTACT US
           </Link>
