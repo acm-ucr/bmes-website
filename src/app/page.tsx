@@ -1,12 +1,10 @@
-import Example from "./Example";
+import Mission from "@/components/about/Mission";
 
 const Home = () => {
   return (
-    <>
-      <div className="flex h-screen w-screen items-center justify-center">
-        <Example text1="Adjust" text2="These" text3="Props" />
-      </div>
-    </>
+    <div>
+      <Mission />
+    </div>
   );
 };
 
