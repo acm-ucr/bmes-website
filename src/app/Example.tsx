@@ -26,7 +26,7 @@ const Example = ({
         {text4}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Example;
