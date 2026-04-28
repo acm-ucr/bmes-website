@@ -30,9 +30,9 @@ const Navbar = () => {
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (
-            <IoMdClose className="h-12 w-12" />
+            <IoMdClose className="text-5xl" />
           ) : (
-            <IoMdMenu className="h-12 w-12" />
+            <IoMdMenu className="text-5xl" />
           )}
         </div>
 
