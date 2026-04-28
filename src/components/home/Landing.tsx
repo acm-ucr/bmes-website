@@ -33,7 +33,7 @@ const Landing = () => {
       </div>
 
       <div className="z-10 mt-12 flex flex-col items-center gap-4">
-        <div className="flex-col justify text-3xl max-w-lg">
+        <div className="justify max-w-lg flex-col text-3xl">
           Check Us Out on <div>Instagram BMES@UCR</div>
         </div>
         <Link
