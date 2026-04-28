@@ -1,4 +1,6 @@
+"use client"
 import Image, { StaticImageData } from "next/image";
+import { usePathname } from "next/navigation";
 
 interface HeaderProps {
   title: string;
@@ -7,16 +9,15 @@ interface HeaderProps {
 }
 
 const Header = ({ title, image, subtitle }: HeaderProps) => {
+  const page = usePathname();
   return (
-    <div className="relative w-screen">
-      <div className="relative h-[50vh] w-full">
-        <Image src={image} alt={title} fill className="object-cover" />
-        <div className="absolute inset-0 flex items-center justify-center text-center">
-          <div className="flex flex-col text-7xl font-light text-white">
-            {title}
-            <div className="mt-5 text-5xl font-light text-white">
-              {subtitle}
-            </div>
+    <div className="relative bg-white pointer-events-none">
+      <Image src={image} alt={title} />
+      <div className="absolute inset-0 flex items-center justify-center text-center">
+        <div className="flex flex-col text-7xl font-light text-white w-2/3">
+          {title}
+          <div className={`mt-5 text-5xl font-light text-white ${page === "/mentorship" ? "underline italic" : ""}`}>
+            {subtitle}
           </div>
         </div>
       </div>
