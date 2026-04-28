@@ -1,16 +1,18 @@
 import Link from "next/link";
+import Image from "next/image";
+import GetInTouchImg from "@/public/getInTouch.webp";
 
 export default function GetInTouch() {
   return (
     <div className="flex flex-row items-center gap-8 rounded-2xl bg-white p-8">
       <div className="flex flex-col gap-4">
-        <h2 className="text-bmes-blue-100 text-5xl font-bold">Get in Touch!</h2>
-        <p className="text-black">
+        <div className="text-bmes-blue-100 text-5xl">Get in Touch!</div>
+        <div className="text-black">
           Whether you are a first year interested in meeting new people or a
           third year looking into internships and learning opportunities, the
           Biomedical Engineering Society is the place for you!
-        </p>
-        <p className="text-black">
+        </div>
+        <div className="text-black">
           FOR MEMBERSHIP REQUESTS, please visit and join at{" "}
           <Link
             href="https://highlander.ucr.edu"
@@ -19,10 +21,10 @@ export default function GetInTouch() {
             HighlanderLink
           </Link>{" "}
           and you will be added to our membership roster and mailing list!
-        </p>
+        </div>
       </div>
-      <img
-        src="/getInTouch.svg"
+      <Image
+        src={GetInTouchImg}
         alt="Get in Touch"
         className="rounded-xl shadow-lg"
       />
