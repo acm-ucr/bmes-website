@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FaInstagram } from "react-icons/fa";
 
 import GearBottomRight from "@/public/gears/bottomRightGear.svg";
 import GearTopRight from "@/public/gears/topRightGear.svg";
 import GearLeft from "@/public/gears/leftGear.svg";
+import SocialButton from "@/components/SocialButton";
 
 const Landing = () => {
   return (
@@ -24,16 +26,16 @@ const Landing = () => {
         className="pointer-events-none absolute right-[0px] bottom-[0px] z-0"
       />
 
-      <p className="z-10 max-w-5xl text-3xl leading-8 text-black">
+      <div className="z-10 max-w-5xl text-3xl leading-8 text-black">
         Welcome to the University of California, Riverside chapter of BMES! We
         aim to promote professional development and social skills among
         bioengineers at UCR through our events.
-      </p>
+      </div>
 
-      <div className="z-10 mt-12">
-        <p className="text-3xl text-black">
-          Check Us Out on <br /> Instagram BMES@UCR
-        </p>
+      <div className="z-10 mt-12 flex flex-col items-center gap-4">
+        <div className="flex-col justify text-3xl max-w-lg">
+          Check Us Out on <div>Instagram BMES@UCR</div>
+        </div>
         <Link
           href="https://www.instagram.com/bmesatucr"
           target="_blank"
@@ -42,9 +44,11 @@ const Landing = () => {
         >
           @bmesatucr
         </Link>
+        <SocialButton
+          link="https://www.instagram.com/bmesatucr"
+          icon={FaInstagram}
+        />
       </div>
-
-      <div className="bg-bmes-blue-200 absolute bottom-0 left-0 h-2 w-full" />
     </div>
   );
 };
