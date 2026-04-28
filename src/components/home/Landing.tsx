@@ -50,5 +50,3 @@ const Landing = () => {
 };
 
 export default Landing;
-
-//ask how pages are formatted, are they wrong? also about sizing of gears
