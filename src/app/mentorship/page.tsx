@@ -5,7 +5,11 @@ import AboutProgram from "@/components/mentorship/AboutProgram";
 const Page = () => {
   return (
     <div>
-      <Header title="Mentorship Program" subtitle="Applications are currently open!" image={mentorHeader} />
+      <Header
+        title="Mentorship Program"
+        subtitle="Applications are currently open!"
+        image={mentorHeader}
+      />
       <AboutProgram />
     </div>
   );

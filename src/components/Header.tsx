@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image, { StaticImageData } from "next/image";
 import { usePathname } from "next/navigation";
 
@@ -11,12 +11,14 @@ interface HeaderProps {
 const Header = ({ title, image, subtitle }: HeaderProps) => {
   const page = usePathname();
   return (
-    <div className="relative bg-white pointer-events-none">
+    <div className="pointer-events-none relative bg-white">
       <Image src={image} alt={title} />
       <div className="absolute inset-0 flex items-center justify-center text-center">
-        <div className="flex flex-col text-7xl font-light text-white w-2/3">
+        <div className="flex w-2/3 flex-col text-7xl font-light text-white">
           {title}
-          <div className={`mt-5 text-5xl font-light text-white ${page === "/mentorship" ? "underline italic" : ""}`}>
+          <div
+            className={`mt-5 text-5xl font-light text-white ${page === "/mentorship" ? "italic underline" : ""}`}
+          >
             {subtitle}
           </div>
         </div>

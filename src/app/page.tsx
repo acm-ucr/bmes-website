@@ -5,7 +5,10 @@ import Landing from "@/components/home/Landing";
 const Home = () => {
   return (
     <div>
-      <Header title="BIOMEDICAL ENGINEERING SOCIETY AT UCR" image={homeHeader} />
+      <Header
+        title="BIOMEDICAL ENGINEERING SOCIETY AT UCR"
+        image={homeHeader}
+      />
       <Landing />
     </div>
   );
