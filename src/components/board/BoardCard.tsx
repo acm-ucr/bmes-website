@@ -25,18 +25,18 @@ const BoardCard = ({ name, image, position, emailLink, about }: CardInfo) => {
         {position}
       </div>
 
-      <div>
-        <button
-          type="button"
-          onClick={() => setShowAbout(true)}
-          className="border-bmes-blue-300 text-bmes-blue-300 mt-4 rounded-xl border-2 px-4 py-3 text-xl font-light uppercase"
-        >
-          About Me
-        </button>
-        {showAbout && (
+      <button
+        type="button"
+        onClick={() => setShowAbout(true)}
+        className="border-bmes-blue-300 text-bmes-blue-300 mt-4 cursor-pointer rounded-xl border-2 px-4 py-3 text-xl font-light uppercase"
+      >
+        About Me
+      </button>
+      {showAbout && (
+        <div className="fixed inset-50 z-50">
           <AboutCard info={about} onClose={() => setShowAbout(false)} />
-        )}
-      </div>
+        </div>
+      )}
 
       <Link
         href={emailLink}
