@@ -1,11 +1,15 @@
+import Header from "@/components/Header";
+import homeHeader from "@/public/headers/homeHeader.webp";
 import Landing from "@/components/home/Landing";
-import Mission from "@/components/about/Mission";
 
 const Home = () => {
   return (
     <div>
+      <Header
+        title="BIOMEDICAL ENGINEERING SOCIETY AT UCR"
+        image={homeHeader}
+      />
       <Landing />
-      <Mission />
     </div>
   );
 };
