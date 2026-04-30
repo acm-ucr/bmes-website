@@ -19,13 +19,13 @@ const BoardCard = ({ name, title, image, email, about }: BoardCardProps) => {
         {name}
       </div>
 
-      <div className="flex h-10 items-center text-base uppercase tracking-wide text-gray-400">
+      <div className="flex h-10 items-center text-base tracking-wide text-gray-400 uppercase">
         {title}
       </div>
 
       <Link
         href={`/board/${name.toLowerCase().split(" ")[0]}`}
-        className="mt-2 rounded-md border border-blue-400 px-5 py-2 text-sm uppercase text-blue-500"
+        className="mt-2 rounded-md border border-blue-400 px-5 py-2 text-sm text-blue-500 uppercase"
       >
         About Me
       </Link>
