@@ -1,42 +1,38 @@
-"use client";
-
 import Link from "next/link";
-import Image, { StaticImageData } from "next/image";
-import { HiOutlineMail } from "react-icons/hi";
+import { MdOutlineMail } from "react-icons/md";
+import MailButton from "./MailButton";
 
-interface CardInfo {
+interface BoardCardProps {
   name: string;
-  image: StaticImageData;
-  position: string;
-  emailLink: string;
+  title: string;
+  image: string;
+  email: string;
+  about: string;
 }
 
-const BoardCard = ({ name, image, position, emailLink }: CardInfo) => {
+const BoardCard = ({ name, title, image, email, about }: BoardCardProps) => {
   return (
     <div className="flex flex-col items-center text-center">
-      <Image src={image} alt={name} />
-      <div className="mt-4 text-2xl text-black">{name}</div>
+      <img src={image} alt={name} className="rounded-full object-cover" />
 
-      <div className="text-bmes-gray-100 mt-2 text-lg font-light uppercase">
-        {position}
+      <div className="mt-3 flex h-10 items-center text-xl font-semibold text-black">
+        {name}
       </div>
 
-      <div>
-        <button
-          type="button"
-          className="border-bmes-blue-300 text-bmes-blue-300 mt-4 rounded-xl border-2 px-4 py-3 text-xl font-light uppercase"
-        >
-          About Me
-        </button>
+      <div className="flex h-10 items-center text-base uppercase tracking-wide text-gray-400">
+        {title}
       </div>
 
       <Link
-        href={emailLink}
-        aria-label={`Email ${name}`}
-        className="bg-bmes-blue-300 mt-6 flex items-center justify-center rounded-3xl p-4 shadow-md"
+        href={`/board/${name.toLowerCase().split(" ")[0]}`}
+        className="mt-2 rounded-md border border-blue-400 px-5 py-2 text-sm uppercase text-blue-500"
       >
-        <HiOutlineMail className="text-4xl text-white" />
+        About Me
       </Link>
+
+      <div className="mt-2">
+        <MailButton email={email} name={name} icon={MdOutlineMail} />
+      </div>
     </div>
   );
 };
