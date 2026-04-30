@@ -10,7 +10,7 @@ interface BoardCardProps {
   about: string;
 }
 
-const BoardCard = ({ name, title, image, email, about }: BoardCardProps) => {
+const BoardCard = ({ name, title, image, email }: BoardCardProps) => {
   return (
     <div className="flex flex-col items-center text-center">
       <img src={image} alt={name} className="rounded-full object-cover" />
