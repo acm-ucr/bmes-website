@@ -1,19 +1,23 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import { HiOutlineMail } from "react-icons/hi";
+import AboutCard from "./AboutCard";
 
 interface CardInfo {
   name: string;
   image: StaticImageData;
   position: string;
   emailLink: string;
+  about: string;
 }
 
-const BoardCard = ({ name, image, position, emailLink }: CardInfo) => {
+const BoardCard = ({ name, image, position, emailLink, about }: CardInfo) => {
+  const [showAbout, setShowAbout] = useState(false);
   return (
-    <div className="flex flex-col items-center text-center">
+    <div className="relative flex flex-col items-center text-center">
       <Image src={image} alt={name} />
       <div className="mt-4 text-2xl text-black">{name}</div>
 
@@ -21,14 +25,18 @@ const BoardCard = ({ name, image, position, emailLink }: CardInfo) => {
         {position}
       </div>
 
-      <div>
-        <button
-          type="button"
-          className="border-bmes-blue-300 text-bmes-blue-300 mt-4 rounded-xl border-2 px-4 py-3 text-xl font-light uppercase"
-        >
-          About Me
-        </button>
-      </div>
+      <button
+        type="button"
+        onClick={() => setShowAbout(true)}
+        className="border-bmes-blue-300 text-bmes-blue-300 mt-4 cursor-pointer rounded-xl border-2 px-4 py-3 text-xl font-light uppercase"
+      >
+        About Me
+      </button>
+      {showAbout && (
+        <div className="fixed inset-50 z-50">
+          <AboutCard info={about} onClose={() => setShowAbout(false)} />
+        </div>
+      )}
 
       <Link
         href={emailLink}
