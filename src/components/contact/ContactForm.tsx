@@ -7,7 +7,10 @@ const ContactForm = () => {
                 to you as soon as possible.
             </div>
 
-            <form className="bg-gradient-to-b from-bmes-blue-300 to-bmes-blue-200 rounded-2xl p-8 shadow-lg w-full max-w-3xl">
+            <form 
+            className="bg-gradient-to-b from-bmes-blue-300 to-bmes-blue-200 rounded-2xl p-8 shadow-lg w-full max-w-3xl"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSfEp520S0MsaVBYi7kvwI3MK9AidS6VyGL4aw1YiJ4low1M2A/formResponse"
+            >
                 <div className="flex gap-4">
                     <div className="flex flex-col flex-1">
                         <label className="text-white mb-2">First Name</label>
