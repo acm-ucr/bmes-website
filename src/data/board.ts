@@ -1,129 +1,130 @@
+import phiphi from "@/public/board/phiphi.webp";
+import george from "@/public/board/george.webp";
+import manishi from "@/public/board/manishi.webp";
+import gerard from "@/public/board/gerard.webp";
+import amariah from "@/public/board/amariah.webp";
+import tj from "@/public/board/tj.webp";
+import jeremy from "@/public/board/jeremy.webp";
+import aadya from "@/public/board/aadya.webp";
+import jarius from "@/public/board/jarius.webp";
+import shawn from "@/public/board/shawn.webp";
+import katelyn from "@/public/board/katelyn.webp";
+import aryan from "@/public/board/aryan.webp";
+import gillian from "@/public/board/gillian.webp";
+import steven from "@/public/board/steven.webp";
+import bill from "@/public/board/bill.webp";
+import abhi from "@/public/board/abhi.webp";
+import sriram from "@/public/board/sriram.webp";
+import robert from "@/public/board/robert.webp";
+
 export const boardInfo = [
   {
     name: "Phiphi Dinh",
-    title: "President",
-    image: "/board/phiphi.svg",
-    email: "",
-    about: "",
+    position: "President",
+    image: phiphi,
+    emailLink: "",
   },
   {
     name: "George Haddad",
-    title: "Vice President",
-    image: "/board/george.svg",
-    email: "",
-    about: "",
+    position: "Vice President",
+    image: george,
+    emailLink: "",
   },
   {
     name: "Manishi Jayasuriya",
-    title: "Professional Development",
-    image: "/board/manishi.svg",
-    email: "",
-    about: "",
+    position: "Professional Development",
+    image: manishi,
+    emailLink: "",
   },
   {
     name: "Gerard Allen D. Paredes",
-    title: "Secretary",
-    image: "/board/gerard.svg",
-    email: "",
-    about: "",
+    position: "Secretary",
+    image: gerard,
+    emailLink: "",
   },
   {
     name: "Amariah Peedikayil",
-    title: "Treasurer",
-    image: "/board/amariah.svg",
-    email: "",
-    about: "",
+    position: "Treasurer",
+    image: amariah,
+    emailLink: "",
   },
   {
     name: "Tj Cobb",
-    title: "Recruitment & Marketing",
-    image: "/board/tj.svg",
-    email: "",
-    about: "",
+    position: "Recruitment & Marketing",
+    image: tj,
+    emailLink: "",
   },
   {
     name: "Jeremy Alquizalas",
-    title: "Mentorship Chair",
-    image: "/board/jeremy.svg",
-    email: "",
-    about: "",
+    position: "Mentorship Chair",
+    image: jeremy,
+    emailLink: "",
   },
   {
     name: "Aadya Penchala",
-    title: "Internal Outreach",
-    image: "/board/aadya.svg",
-    email: "",
-    about: "",
+    position: "Internal Outreach",
+    image: aadya,
+    emailLink: "",
   },
   {
     name: "Jarius Gabato",
-    title: "External Outreach",
-    image: "/board/jarius.svg",
-    email: "",
-    about: "",
+    position: "External Outreach",
+    image: jarius,
+    emailLink: "",
   },
   {
     name: "Shawn Kanyiri",
-    title: "Webmaster",
-    image: "/board/shawn.svg",
-    email: "",
-    about: "",
+    position: "Webmaster",
+    image: shawn,
+    emailLink: "",
   },
   {
     name: "Katelyn Kuba",
-    title: "Sponsorship & Fundraising Chair",
-    image: "/board/katelyn.svg",
-    email: "",
-    about: "",
+    position: "Sponsorship & Fundraising Chair",
+    image: katelyn,
+    emailLink: "",
   },
   {
     name: "Aryan Dhiman",
-    title: "Technical Development",
-    image: "/board/aryan.svg",
-    email: "",
-    about: "",
+    position: "Technical Development",
+    image: aryan,
+    emailLink: "",
   },
   {
     name: "Gillian Sebald",
-    title: "Socials",
-    image: "/board/gillian.svg",
-    email: "",
-    about: "",
+    position: "Socials",
+    image: gillian,
+    emailLink: "",
   },
   {
     name: "Steven Vu",
-    title: "BearHack Director",
-    image: "/board/steven.svg",
-    email: "",
-    about: "",
+    position: "BearHack Director",
+    image: steven,
+    emailLink: "",
   },
   {
     name: "Bill Pham",
-    title: "BearHack Director",
-    image: "/board/bill.svg",
-    email: "",
-    about: "",
+    position: "BearHack Director",
+    image: bill,
+    emailLink: "",
   },
   {
     name: "Abhi Tamatam",
-    title: "Project Co Lead",
-    image: "/board/abhi.svg",
-    email: "",
-    about: "",
+    position: "Project Co Lead",
+    image: abhi,
+    emailLink: "",
   },
   {
     name: "Sriram Mokkapati",
-    title: "Project Co Lead",
-    image: "/board/sriram.svg",
-    email: "",
-    about: "",
+    position: "Project Co Lead",
+    image: sriram,
+    emailLink: "",
   },
   {
     name: "Dr. Robert McKee",
-    title: "Faculty Advisor",
-    image: "/board/robert.svg",
-    email: "",
-    about: "",
+    position: "Faculty Advisor",
+    image: robert,
+    emailLink: "",
   },
 ];
 

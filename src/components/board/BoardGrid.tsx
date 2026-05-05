@@ -8,10 +8,9 @@ const BoardGrid = () => {
         <div key={member.name} className={index === 16 ? "lg:col-start-2" : ""}>
           <BoardCard
             name={member.name}
-            title={member.title}
             image={member.image}
-            email={member.email}
-            about={member.about}
+            position={member.position}
+            emailLink={member.emailLink}
           />
         </div>
       ))}
