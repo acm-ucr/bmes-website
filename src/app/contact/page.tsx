@@ -3,6 +3,7 @@ import contactHeader from "@/public/headers/contactHeader.webp";
 import SocialButton from "@/components/SocialButton";
 import { FaDiscord } from "react-icons/fa";
 import GetInTouch from "@/components/contact/GetInTouch";
+import ContactForm from "@/components/contact/ContactForm";
 
 const Contact = () => {
   return (
@@ -13,6 +14,7 @@ const Contact = () => {
         icon={FaDiscord}
       />
       <GetInTouch />
+      <ContactForm />
     </div>
   );
 };
