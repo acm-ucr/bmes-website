@@ -19,7 +19,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Icons */}
         <div
           aria-label="footer links"
           className="flex items-center gap-4 pt-10 md:justify-end"
