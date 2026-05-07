@@ -7,8 +7,8 @@ import Logo from "@/public/bmes-logo.svg";
 
 const Footer = () => {
   return (
-    <div className="bg-bmes-blue-200 flex flex-col w-full px-6 py-4">
-      <div className="gap-16 md:flex-row md:items-end md:justify-between">
+    <div className="bg-bmes-blue-200 flex w-full flex-col px-6 py-4">
+      <div className="flex gap-16 md:flex-row md:items-end md:justify-between">
         <div className="flex items-end gap-4">
           <Image src={Logo} alt="BMES Logo" className="w-14 md:w-16" />
 
