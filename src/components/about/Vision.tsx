@@ -1,14 +1,14 @@
 const Vision = () => {
   return (
-    <div className="from-bmes-blue-300 to-bmes-blue-200 flex h-[80vh] w-full flex-col items-center justify-center bg-linear-to-b px-10">
-      <div className="mb-6 text-5xl text-white">Our Vision</div>
-      <p className="mb-5 w-3/4 text-center text-2xl text-white">
+    <div className="from-bmes-blue-300 to-bmes-blue-200 flex min-h-[80vh] w-full flex-col items-center justify-center bg-linear-to-b px-6 py-10 md:px-10">
+      <div className="mb-6 text-3xl text-white md:text-5xl">Our Vision</div>
+      <p className="mb-5 w-full text-center text-lg text-white md:w-3/4 md:text-2xl">
         The vision of the Biomedical Engineering Society (BMES) is to serve as
         the world's leading society of professionals devoted to developing and
         using engineering and technology to advance human and well being.
       </p>
 
-      <p className="w-3/4 text-center text-2xl text-white">
+      <p className="w-full text-center text-lg text-white md:w-3/4 md:text-2xl">
         We at the UC Riverside chapter of this organization are dedicated in
         helping our members achieve their academic goals, whether they be
         pursuing graduate school, medical school, or a career in industry. The
