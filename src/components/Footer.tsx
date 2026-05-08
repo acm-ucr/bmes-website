@@ -1,16 +1,17 @@
 "use client";
+
 import Link from "next/link";
+import Image from "next/image";
 import { footerIcons } from "@/data/footer";
 import Logo from "@/public/bmes-logo.svg";
-import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className="bg-bmes-blue-200 flex w-full items-end justify-between py-3">
+    <div className="bg-bmes-blue-200 flex w-full flex-col px-6 py-4 md:flex-row md:items-end md:justify-between md:gap-6">
       <div className="flex items-end gap-4">
-        <Image src={Logo} alt="BMES Logo" className="pl-5" />
+        <Image src={Logo} alt="BMES Logo" className="w-14 md:w-16" />
 
-        <div className="text-bmes-gray-200 text-lg leading-tight">
+        <div className="text-bmes-gray-200 text-lg leading-tight md:text-xl">
           <div>BIOMEDICAL</div>
           <div>ENGINEERING</div>
           <div>SOCIETY</div>
@@ -19,7 +20,7 @@ const Footer = () => {
 
       <div
         aria-label="footer links"
-        className="flex items-center gap-4 pt-30 pr-5"
+        className="flex items-center gap-4 pt-10 md:justify-end"
       >
         {footerIcons.map(({ href, name, icon: Icon }, index) => (
           <Link
@@ -27,7 +28,7 @@ const Footer = () => {
             href={href}
             aria-label={name}
             target="_blank"
-            className="text-bmes-gray-200 flex items-center justify-center text-3xl"
+            className="text-bmes-gray-200 text-4xl md:text-3xl"
           >
             <Icon />
           </Link>
@@ -36,4 +37,5 @@ const Footer = () => {
     </div>
   );
 };
+
 export default Footer;
