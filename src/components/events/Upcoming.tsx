@@ -9,7 +9,7 @@ import events from "@/data/events";
 
 const Upcoming = () => {
   return (
-    <div className="relative flex h-[60vh] w-full items-center justify-start overflow-hidden bg-white px-4">
+    <div className="relative flex h-[70vh] w-full items-center justify-start overflow-hidden px-4">
       <Image
         src={gear1}
         alt="Gear at the bottom right corner"
