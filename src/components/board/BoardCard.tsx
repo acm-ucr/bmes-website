@@ -16,25 +16,33 @@ interface CardInfo {
 
 const BoardCard = ({ name, image, position, emailLink, about }: CardInfo) => {
   const [showAbout, setShowAbout] = useState(false);
+
   return (
     <div className="relative flex flex-col items-center text-center">
-      <Image src={image} alt={name} />
+      <Image
+        src={image}
+        alt={name}
+        width={192}
+        height={192}
+        className="h-48 w-48 object-cover"
+      />
 
-      <div className="mt-4 flex h-16 items-center justify-center text-2xl text-black">
+      <div className="mt-3 flex min-h-14 items-center justify-center px-2 text-2xl leading-tight text-black">
         {name}
       </div>
 
-      <div className="text-bmes-gray-100 mt-1 flex h-12 items-center justify-center text-lg font-light uppercase">
+      <div className="text-bmes-gray-100 mt-0 flex min-h-10 items-center justify-center px-2 text-lg leading-tight font-light uppercase">
         {position}
       </div>
 
       <button
         type="button"
         onClick={() => setShowAbout(true)}
-        className="border-bmes-blue-300 text-bmes-blue-300 mt-4 cursor-pointer rounded-xl border-2 px-4 py-3 text-xl font-light uppercase"
+        className="border-bmes-blue-300 text-bmes-blue-300 mt-2 cursor-pointer rounded-xl border-2 px-4 py-2 text-xl font-light uppercase"
       >
         About Me
       </button>
+
       {showAbout && (
         <div className="fixed inset-50 z-50">
           <AboutCard info={about} onClose={() => setShowAbout(false)} />
@@ -44,7 +52,7 @@ const BoardCard = ({ name, image, position, emailLink, about }: CardInfo) => {
       <Link
         href={emailLink}
         aria-label={`Email ${name}`}
-        className="bg-bmes-blue-300 mt-6 flex items-center justify-center rounded-3xl p-4 shadow-md"
+        className="bg-bmes-blue-300 mt-4 flex items-center justify-center rounded-3xl p-4 shadow-md"
       >
         <HiOutlineMail className="text-4xl text-white" />
       </Link>
