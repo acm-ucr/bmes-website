@@ -38,7 +38,7 @@ const Landing = () => {
       <Image
         src={SmallTopGearRight}
         alt="Decorative gear on the top right side"
-        className="pointer-events-none absolute -top-[-410px] -right-[15px] z-0 block md:hidden"
+        className="pointer-events-none absolute -top-[-370px] -right-[15px] z-0 block md:hidden"
       />
       <Image
         src={SmallBottomGearRight}
