@@ -10,20 +10,20 @@ const AboutProgram = () => {
       <Image
         src={GearLeft}
         alt="Decorative gear on the left side"
-        className="pointer-events-none absolute -bottom-[80px] left-[0px] z-0"
+        className="pointer-events-none absolute -bottom-[80px] left-[0px] z-0 hidden md:block"
       />
       <Image
         src={GearTopRight}
         alt="Decorative gear on the top right side"
-        className="pointer-events-none absolute -top-[20px] -right-[15px] z-0"
+        className="pointer-events-none absolute -top-[20px] -right-[15px] z-0 hidden md:block"
       />
       <Image
         src={GearBottomRight}
         alt="Decorative gear on the bottom right side"
-        className="pointer-events-none absolute right-[0px] bottom-[10px] z-0"
+        className="pointer-events-none absolute right-[0px] bottom-[10px] z-0 hidden md:block"
       />
 
-      <div className="text-bmes-blue-200 z-10 mb-6 text-4xl font-semibold">
+      <div className="text-bmes-blue-200 z-10 mb-6 text-4xl font-semibold hidden md:block">
         About The Program
       </div>
 
