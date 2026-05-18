@@ -52,7 +52,7 @@ const AboutProgram = () => {
         href="https://docs.google.com/forms/d/e/1FAIpQLSe_JAmygafDcCn9ZOmhAtJMnvt12eJtTAhqDsywWScxiyF5Yg/viewform"
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-bmes-blue-300 z-10 mt-4 rounded-xl px-10 py-4 text-2xl font-bold text-white underline shadow-md transition hover:scale-105"
+        className="bg-bmes-blue-300 z-10 mt-4 rounded-xl px-6 md:px-10 py-3 md:py-4 text-xl md:text-2xl font-bold text-white underline shadow-md transition hover:scale-105 "
       >
         APPLY NOW
       </a>
