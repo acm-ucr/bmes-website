@@ -3,10 +3,36 @@ import Image from "next/image";
 import GearBottomRight from "@/public/gears/gear-bottom-right.svg";
 import GearTopRight from "@/public/gears/gear-top-right.svg";
 import GearLeft from "@/public/gears/gear-left.svg";
+import SmallGearTopRight from "@/public/gears/abtprgrm-small-gear-topright.svg";
+import SmallGearMidLeft from "@/public/gears/abtprgrm-small-gearmidleft.svg";
+import SmallGearMidRight from "@/public/gears/abtprgrm-small-gearmidright.svg";
+import SmallGearBotLeft from "@/public/gears/abtprgrm-small-gearbotleft.svg";
 
 const AboutProgram = () => {
   return (
-    <div className="relative flex flex-col items-center overflow-hidden px-8 py-20 text-center">
+    <div className="relative flex w-full flex-col items-center overflow-hidden px-8 py-20 text-center">
+      {/* MOBILE GEARS */}
+      <Image
+        src={SmallGearTopRight}
+        alt="Decorative gear on the top right side"
+        className="pointer-events-none absolute -top-[95px] right-0 md:hidden"
+      />
+      <Image
+        src={SmallGearMidLeft}
+        alt="Decorative gear on the top right side"
+        className="pointer-events-none absolute top-30 left-0 md:hidden"
+      />
+      <Image
+        src={SmallGearMidRight}
+        alt="Decorative gear on the top right side"
+        className="pointer-events-none absolute top-80 right-0 md:hidden"
+      />
+      <Image
+        src={SmallGearBotLeft}
+        alt="Decorative gear on the top right side"
+        className="pointer-events-none absolute -bottom-[130px] left-0 md:hidden"
+      />
+
       <Image
         src={GearLeft}
         alt="Decorative gear on the left side"
@@ -23,7 +49,7 @@ const AboutProgram = () => {
         className="pointer-events-none absolute right-[0px] bottom-[10px] z-0 hidden md:block"
       />
 
-      <div className="text-bmes-blue-200 z-10 mb-6 text-4xl font-semibold hidden md:block">
+      <div className="text-bmes-blue-200 z-10 mb-6 hidden text-4xl font-semibold md:block">
         About The Program
       </div>
 
@@ -52,7 +78,7 @@ const AboutProgram = () => {
         href="https://docs.google.com/forms/d/e/1FAIpQLSe_JAmygafDcCn9ZOmhAtJMnvt12eJtTAhqDsywWScxiyF5Yg/viewform"
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-bmes-blue-300 z-10 mt-4 rounded-xl px-6 md:px-10 py-3 md:py-4 text-xl md:text-2xl font-bold text-white underline shadow-md transition hover:scale-105 "
+        className="bg-bmes-blue-300 z-10 mt-4 rounded-xl px-6 py-3 text-xl font-bold text-white underline shadow-md transition hover:scale-105 md:px-10 md:py-4 md:text-2xl"
       >
         APPLY NOW
       </a>
