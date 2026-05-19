@@ -30,24 +30,24 @@ const Mission = () => {
       />
       <Image
         src={gear3Sm}
-        alt=""
+        alt="Decorative gear in the top left corner"
         aria-hidden="true"
         className="pointer-events-none absolute top-0 left-0 z-0 block lg:hidden"
       />
       <Image
         src={gear2Sm}
-        alt=""
+        alt="Decorative gear in the bottom right corner"
         aria-hidden="true"
-        className="pointer-events-none absolute top-1/3 right-0 z-0 block lg:hidden"
+        className="pointer-events-none absolute right-0 bottom-0 z-0 block lg:hidden"
       />
       <Image
         src={gear1Sm}
-        alt=""
+        alt="Decorative gear in middle right"
         aria-hidden="true"
-        className="pointer-events-none absolute top-0 right-0 z-0 block lg:hidden"
+        className="pointer-events-none absolute top-1/2 right-0 z-0 block lg:hidden"
       />
       <div className="relative z-10 mx-auto max-w-5xl text-center">
-        <div className="text-bmes-blue-200 mb-4 text-3xl font-semibold sm:text-4xl lg:text-5xl">
+        <div className="text-bmes-blue-200 mb-4 text-3xl sm:text-4xl lg:text-5xl">
           Mission Statement
         </div>
         <p className="pt-4 text-base leading-relaxed sm:text-lg md:text-xl lg:pt-6 lg:text-2xl">
