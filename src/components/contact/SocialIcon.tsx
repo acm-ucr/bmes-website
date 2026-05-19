@@ -1,18 +1,17 @@
-import React from "react";
 import Link from "next/link";
+import { IconType } from "react-icons";
 
 interface SocialIconProps {
-  icon: React.ComponentType;
-  url: string;
+  icon: IconType;
+  href: string;
 }
 
-const SocialIcon = ({ icon, url }: SocialIconProps) => {
-  const Icon = icon;
+const SocialIcon = ({ icon: Icon, href }: SocialIconProps) => {
   return (
     <Link
-      href={url}
+      href={href}
       target="_blank"
-      className="bg-bmes-blue-300 h-18 w-18 rounded-full p-3 text-5xl text-white shadow-lg"
+      className="bg-bmes-blue-300 rounded-full p-5 text-7xl text-white shadow-lg"
     >
       <Icon />
     </Link>
