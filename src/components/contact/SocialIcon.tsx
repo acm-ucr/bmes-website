@@ -11,7 +11,7 @@ const SocialIcon = ({ icon: Icon, href }: SocialIconProps) => {
     <Link
       href={href}
       target="_blank"
-      className="bg-bmes-blue-300 rounded-full p-5 text-7xl text-white shadow-lg"
+      className="bg-bmes-blue-300 flex items-center justify-center rounded-full p-3 text-2xl text-white shadow-lg"
     >
       <Icon />
     </Link>
