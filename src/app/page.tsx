@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Header from "@/components/Header";
 import homeHeader from "@/public/headers/homeHeader.webp";
 import SmallHomeHeader from "@/public/headers/mobileHomeHeader.webp";
