@@ -10,7 +10,6 @@ import Image from "next/image";
 const NotFound = () => {
   return (
     <div className="relative flex min-h-[87vh] flex-col items-center justify-center overflow-hidden">
-
       <Image
         src={gear404TopLeftSmall}
         alt="Decorative gear"
@@ -22,7 +21,6 @@ const NotFound = () => {
         className="absolute top-0 left-0 -z-10 hidden md:block"
       />
 
-
       <Image
         src={gear404BottomCenterSmall}
         alt="Decorative gear"
@@ -31,7 +29,7 @@ const NotFound = () => {
       <Image
         src={gear404BottomCenterLarge}
         alt="Decorative gear"
-        className="absolute bottom-0 left-1/4 -z-10 -translate-x-1/2 translate-y-1/2 hidden md:block"
+        className="absolute bottom-0 left-1/4 -z-10 hidden -translate-x-1/2 translate-y-1/2 md:block"
       />
 
       <Image
