@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import gear1 from "@/public/mission/gear-1.svg";
 import gear2 from "@/public/mission/gear-2.svg";
@@ -6,6 +7,8 @@ import gear3 from "@/public/mission/gear-3.svg";
 import gear1Sm from "@/public/gears/gear-1-sm.svg";
 import gear2Sm from "@/public/gears/gear-2-sm.svg";
 import gear3Sm from "@/public/gears/gear-3-sm.svg";
+
+import { motion } from "motion/react";
 
 const Mission = () => {
   return (
@@ -47,17 +50,25 @@ const Mission = () => {
         className="pointer-events-none absolute top-1/2 right-0 z-0 block lg:hidden"
       />
       <div className="relative z-10 mx-auto max-w-5xl text-center">
-        <div className="text-bmes-blue-200 mb-4 text-3xl sm:text-4xl lg:text-5xl">
+        <motion.div 
+          initial={{ opacity: 0, y: -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="text-bmes-blue-200 mb-4 text-3xl sm:text-4xl lg:text-5xl">
           Mission Statement
-        </div>
-        <p className="pt-4 text-base leading-relaxed sm:text-lg md:text-xl lg:pt-6 lg:text-2xl">
+        </motion.div>
+        <motion.div 
+          initial={{ opacity: 0, y : -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="pt-4 text-base leading-relaxed sm:text-lg md:text-xl lg:pt-6 lg:text-2xl">
           The Mission of the BMES is to build and support the biomedical
           engineering community, locally, nationally, and internationally, with
           activities designed to communicate recent advances, discoveries, and
           inventions; promote education and professional development; and
           integrate the perspectives of the academic, medical, governmental, and
           business sectors.
-        </p>
+        </motion.div>
       </div>
     </div>
   );
