@@ -1,36 +1,39 @@
 import Link from "next/link";
-import gear_1 from "@/public/404-gears/gear-1.svg";
-import gear_2 from "@/public/404-gears/gear-2.svg";
-import gear_3 from "@/public/404-gears/gear-3.svg";
+import gear404TopLeft from "@/public/gears/404TopGear.svg";
+import gear404BottomCenter from "@/public/gears/404BottomGear.svg";
+import gear404BottomRight from "@/public/gears/404RightGear.svg";
 import Image from "next/image";
 
 const NotFound = () => {
   return (
-    <>
-      <div className="relative -z-100 flex min-h-[87vh] flex-col items-center justify-center">
-        <Image src={gear_1} alt="gear" className="absolute top-0 left-0 z-0" />
-        <Image
-          src={gear_2}
-          alt="gear"
-          className="absolute right-1/2 bottom-0 z-0"
-        />
-        <Image
-          src={gear_3}
-          alt="gear"
-          className="absolute right-0 bottom-0 z-0"
-        />
-        <div className="relative z-10 flex flex-col items-center">
-          <p className="text-bmes-blue-200 mb-2 text-9xl font-bold">404</p>
-          <p className="mb-2 text-3xl font-light">Page Not Found</p>
-          <Link
-            href="/"
-            className="bg-bmes-blue-300 rounded-2xl px-4 py-2 text-white shadow-lg"
-          >
-            Return Home
-          </Link>
-        </div>
+    <div className="relative flex min-h-[87vh] flex-col items-center justify-center overflow-hidden">
+      <Image
+        src={gear404TopLeft}
+        alt=""
+        className="absolute top-5 left-0 -z-10"
+      />
+      <Image
+        src={gear404BottomCenter}
+        alt=""
+        className="absolute bottom-0 left-2/3 -z-10 -translate-x-1/2 translate-y-1/2"
+      />
+      <Image
+        src={gear404BottomRight}
+        alt=""
+        className="absolute right-0 bottom-5 -z-10"
+      />
+
+      <div className="flex flex-col items-center text-center">
+        <p className="text-bmes-blue-200 mb-2 text-9xl font-bold">404</p>
+        <p className="mb-6 text-3xl font-light">Page Not Found</p>
+        <Link
+          href="/"
+          className="bg-bmes-blue-300 rounded-2xl px-4 py-2 text-white shadow-lg transition-opacity hover:opacity-90"
+        >
+          Return Home
+        </Link>
       </div>
-    </>
+    </div>
   );
 };
 
