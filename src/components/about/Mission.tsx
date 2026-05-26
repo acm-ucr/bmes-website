@@ -50,18 +50,20 @@ const Mission = () => {
         className="pointer-events-none absolute top-1/2 right-0 z-0 block lg:hidden"
       />
       <div className="relative z-10 mx-auto max-w-5xl text-center">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-bmes-blue-200 mb-4 text-3xl sm:text-4xl lg:text-5xl">
+          className="text-bmes-blue-200 mb-4 text-3xl sm:text-4xl lg:text-5xl"
+        >
           Mission Statement
         </motion.div>
-        <motion.div 
-          initial={{ opacity: 0, y : -40 }}
+        <motion.div
+          initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="pt-4 text-base leading-relaxed sm:text-lg md:text-xl lg:pt-6 lg:text-2xl">
+          className="pt-4 text-base leading-relaxed sm:text-lg md:text-xl lg:pt-6 lg:text-2xl"
+        >
           The Mission of the BMES is to build and support the biomedical
           engineering community, locally, nationally, and internationally, with
           activities designed to communicate recent advances, discoveries, and
