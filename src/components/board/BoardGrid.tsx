@@ -32,6 +32,7 @@ const BoardGrid = () => {
             position={position}
             emailLink={emailLink}
             about={about}
+            index={index}
           />
         </div>
       ))}
