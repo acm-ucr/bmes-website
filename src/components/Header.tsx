@@ -21,7 +21,7 @@ const Header = ({ title, image, mobileImage, subtitle }: HeaderProps) => {
       />
 
       <div className="absolute inset-0 flex items-center justify-center text-center">
-        <div className="sm:text-10xl flex w-2/3 flex-col text-center text-7xl leading-tight font-light text-white">
+        <div className="lg:text-10xl flex flex-col place-self-center text-center text-4xl leading-tight font-light text-white sm:w-2/3 md:text-6xl lg:w-1/2">
           {title}
           <div
             className={`mt-5 text-5xl font-light text-white ${page === "/mentorship" ? "italic underline" : ""}`}
