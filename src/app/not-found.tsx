@@ -1,10 +1,10 @@
 import Link from "next/link";
-import gear404TopLeftLarge from "@/public/gears/404TopGearLarge.svg";
-import gear404BottomCenterLarge from "@/public/gears/404BottomGearLarge.svg";
-import gear404BottomRightLarge from "@/public/gears/404RightGearLarge.svg";
-import gear404TopLeftSmall from "@/public/gears/404TopGearSmall.svg";
-import gear404BottomCenterSmall from "@/public/gears/404BottomGearSmall.svg";
-import gear404BottomRightSmall from "@/public/gears/404RightGearSmall.svg";
+import gear404TopLeftLarge from "@/public/404-gears/404TopGearLarge.svg";
+import gear404BottomCenterLarge from "@/public/404-gears/404BottomGearLarge.svg";
+import gear404BottomRightLarge from "@/public/404-gears/404RightGearLarge.svg";
+import gear404TopLeftSmall from "@/public/404-gears/404TopGearSmall.svg";
+import gear404BottomCenterSmall from "@/public/404-gears/404BottomGearSmall.svg";
+import gear404BottomRightSmall from "@/public/404-gears/404RightGearSmall.svg";
 import Image from "next/image";
 
 const NotFound = () => {
@@ -13,34 +13,34 @@ const NotFound = () => {
       <Image
         src={gear404TopLeftSmall}
         alt="Decorative gear"
-        className="absolute top-5 left-0 -z-10 md:hidden"
+        className="absolute -top-5 -left-5 -z-10 p-4 md:hidden"
       />
       <Image
         src={gear404TopLeftLarge}
         alt="Decorative gear"
-        className="absolute top-0 left-0 -z-10 hidden md:block"
+        className="absolute -top-6 -left-5 -z-10 hidden p-6 md:block"
       />
 
       <Image
         src={gear404BottomCenterSmall}
         alt="Decorative gear"
-        className="absolute bottom-0 left-2/3 -z-10 -translate-x-1/2 translate-y-1/2 md:hidden"
+        className="absolute bottom-0 left-2/3 -z-10 -translate-x-1/2 translate-y-1/2 p-4 md:hidden"
       />
       <Image
         src={gear404BottomCenterLarge}
         alt="Decorative gear"
-        className="absolute bottom-0 left-1/4 -z-10 hidden -translate-x-1/2 translate-y-1/2 md:block"
+        className="absolute bottom-0 left-1/4 -z-10 hidden -translate-x-1/2 translate-y-1/2 p-6 md:block"
       />
 
       <Image
         src={gear404BottomRightSmall}
         alt="Decorative gear"
-        className="absolute right-0 bottom-5 -z-10 md:hidden"
+        className="absolute -right-5 bottom-5 -z-10 p-4 md:hidden"
       />
       <Image
         src={gear404BottomRightLarge}
         alt="Decorative gear"
-        className="absolute right-0 bottom-0 -z-10 hidden md:block"
+        className="absolute -right-5 -bottom-5 -z-10 hidden p-6 md:block"
       />
 
       <div className="flex flex-col items-center text-center">
