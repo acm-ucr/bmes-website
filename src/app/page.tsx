@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import homeHeader from "@/public/headers/homeHeader.webp";
-import SmallHomeHeader from "@/public/headers/mobileHomeHeader.webp";
+import mobileHeader from "@/public/mobileHeaders/mobileHome.webp";
 import Landing from "@/components/home/Landing";
 
 const Home = () => {
@@ -9,7 +9,7 @@ const Home = () => {
       <Header
         title="BIOMEDICAL ENGINEERING SOCIETY AT UCR"
         image={homeHeader}
-        mobileImage={SmallHomeHeader}
+        mobileImage={mobileHeader}
       />
       <Landing />
     </div>
