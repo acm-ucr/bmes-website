@@ -59,9 +59,8 @@ const AboutProgram = () => {
       <motion.div
         {...fadeInAnimation}
         viewport={{ once: true }}
-        className="text-bmes-blue-200 z-10 mb-6 text-4xl font-semibold"
+        className="text-bmes-blue-200 z-10 mb-6 hidden text-4xl font-semibold md:block"
       >
-      <div className="text-bmes-blue-200 z-10 mb-6 hidden text-4xl font-semibold md:block">
         About The Program
       </motion.div>
 
