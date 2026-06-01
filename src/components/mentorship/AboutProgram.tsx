@@ -1,8 +1,15 @@
+"use client";
 import Image from "next/image";
-
 import GearBottomRight from "@/public/gears/gear-bottom-right.svg";
 import GearTopRight from "@/public/gears/gear-top-right.svg";
 import GearLeft from "@/public/gears/gear-left.svg";
+import { motion } from "motion/react";
+
+const fadeInAnimation = {
+  initial: { opacity: 0, y: -10 },
+  transition: { duration: 1.2 },
+  whileInView: { opacity: 1, y: 0 },
+};
 
 const AboutProgram = () => {
   return (
@@ -23,11 +30,19 @@ const AboutProgram = () => {
         className="pointer-events-none absolute right-[0px] bottom-[10px] z-0"
       />
 
-      <div className="text-bmes-blue-200 z-10 mb-6 text-4xl font-semibold">
+      <motion.div
+        {...fadeInAnimation}
+        viewport={{ once: true }}
+        className="text-bmes-blue-200 z-10 mb-6 text-4xl font-semibold"
+      >
         About The Program
-      </div>
+      </motion.div>
 
-      <p className="z-10 max-w-3xl text-lg leading-8 text-black">
+      <motion.p
+        {...fadeInAnimation}
+        viewport={{ once: true }}
+        className="z-10 max-w-3xl text-lg leading-8 text-black"
+      >
         The Bioengineering Mentorship Program was established in conjunction
         with the{" "}
         <a
@@ -44,20 +59,32 @@ const AboutProgram = () => {
         student for the school year to help them achieve academic and
         professional success by preparing them for their undergraduate studies
         and how to apply for professional positions.
-      </p>
+      </motion.p>
 
-      <p className="z-10 mt-6 text-lg">Applications are currently open!</p>
+      <motion.p
+        {...fadeInAnimation}
+        viewport={{ once: true }}
+        className="z-10 mt-6 text-lg"
+      >
+        Applications are currently open!
+      </motion.p>
 
-      <a
+      <motion.a
+        {...fadeInAnimation}
+        viewport={{ once: true }}
         href="https://docs.google.com/forms/d/e/1FAIpQLSe_JAmygafDcCn9ZOmhAtJMnvt12eJtTAhqDsywWScxiyF5Yg/viewform"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-bmes-blue-300 z-10 mt-4 rounded-xl px-10 py-4 text-2xl font-bold text-white underline shadow-md transition hover:scale-105"
       >
         APPLY NOW
-      </a>
+      </motion.a>
 
-      <p className="z-10 mt-8 text-lg">
+      <motion.p
+        {...fadeInAnimation}
+        viewport={{ once: true }}
+        className="z-10 mt-8 text-lg"
+      >
         For more information, please contact{" "}
         <a
           href="mailto:bmesmentorship@gmail.com"
@@ -66,7 +93,7 @@ const AboutProgram = () => {
           bmesmentorship@gmail.com
         </a>
         .
-      </p>
+      </motion.p>
 
       <div className="bg-bmes-blue-200 absolute bottom-0 left-0 h-2 w-full" />
     </div>
