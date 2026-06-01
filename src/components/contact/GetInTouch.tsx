@@ -4,14 +4,18 @@ import GetInTouchImg from "@/public/getInTouch.webp";
 
 const GetInTouch = () => {
   return (
-    <div className="flex w-11/12 items-center justify-center gap-8 place-self-center rounded-2xl bg-white p-8">
-      <div className="flex w-1/2 flex-col gap-4">
-        <div className="text-bmes-blue-100 text-5xl">Get in Touch!</div>
+    <div className="flex w-11/12 flex-col items-center justify-center gap-8 place-self-center rounded-2xl bg-white p-6 sm:p-8 md:flex-row md:gap-12 md:p-10">
+      <div className="flex flex-col gap-4 text-center md:text-left">
+        <div className="text-bmes-blue-100 py-4 text-3xl md:py-8 md:text-4xl lg:text-5xl">
+          Get in Touch!
+        </div>
+
         <div>
           Whether you are a first year interested in meeting new people or a
           third year looking into internships and learning opportunities, the
           Biomedical Engineering Society is the place for you!
         </div>
+
         <div>
           FOR MEMBERSHIP REQUESTS, please visit and join at{" "}
           <Link
@@ -23,10 +27,11 @@ const GetInTouch = () => {
           and you will be added to our membership roster and mailing list!
         </div>
       </div>
+
       <Image
         src={GetInTouchImg}
         alt="Get in Touch"
-        className="rounded-xl shadow-lg"
+        className="w-full rounded-xl shadow-lg md:w-1/2"
       />
     </div>
   );
