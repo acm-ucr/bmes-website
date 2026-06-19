@@ -16,6 +16,13 @@ interface CardInfo {
   index: number;
 }
 
+const boardAnimation = {
+  initial: { y: 20, opacity: 0 },
+  whileInView: { y: 0, opacity: 1 },
+  transition: { duration: 0.8 },
+  viewport: { once: true },
+};
+
 const BoardCard = ({
   name,
   image,
@@ -28,37 +35,27 @@ const BoardCard = ({
 
   return (
     <motion.div
-      initial={{ y: 20, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, delay: (index % 4) * 0.1 }}
-      viewport={{ once: true }}
+      {...boardAnimation}
+      transition={{ delay: (index % 4) * 0.1 }}
       className="relative flex flex-col items-center text-center"
     >
-      <motion.div whileHover={{ scale: 1.08 }} transition={{ duration: 0.2 }}>
-        <Image
-          src={image}
-          alt={name}
-          width={192}
-          height={192}
-          className="h-48 w-48 object-cover"
-        />
-      </motion.div>
+      <Image src={image} alt={name} />
 
       <div className="mt-3 flex min-h-14 items-center justify-center px-2 text-2xl leading-tight text-black">
         {name}
       </div>
 
-      <div className="text-bmes-gray-100 mt-0 flex min-h-10 items-center justify-center px-2 text-lg leading-tight font-light uppercase">
+      <div className="text-bmes-gray-100 flex min-h-10 items-center justify-center px-2 text-lg leading-tight font-light uppercase">
         {position}
       </div>
 
-      <button
-        type="button"
+      <motion.div
         onClick={() => setShowAbout(true)}
-        className="border-bmes-blue-300 text-bmes-blue-300 hover:bg-bmes-gray-100 mt-2 cursor-pointer rounded-xl border-2 px-4 py-2 text-xl font-light uppercase transition-colors duration-200 hover:text-white"
+        whileHover={{ scale: 1.1 }}
+        className="border-bmes-blue-300 text-bmes-blue-300 mt-3 cursor-pointer rounded-xl border-2 px-4 py-2 text-xl font-light uppercase"
       >
         About Me
-      </button>
+      </motion.div>
 
       {showAbout && (
         <div className="fixed inset-50 z-50">
@@ -66,13 +63,14 @@ const BoardCard = ({
         </div>
       )}
 
-      <Link
-        href={emailLink}
-        aria-label={`Email ${name}`}
-        className="bg-bmes-blue-300 hover:bg-bmes-gray-100 mt-4 flex items-center justify-center rounded-3xl p-4 shadow-md transition-colors duration-200"
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        className="bg-bmes-blue-300 mt-4 flex items-center justify-center rounded-3xl p-4"
       >
-        <HiOutlineMail className="text-4xl text-white transition-colors duration-200" />
-      </Link>
+        <Link href={emailLink}>
+          <HiOutlineMail className="text-4xl text-white" />
+        </Link>
+      </motion.div>
     </motion.div>
   );
 };
