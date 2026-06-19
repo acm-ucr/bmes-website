@@ -10,9 +10,16 @@ import gear3Sm from "@/public/gears/gear-3-sm.svg";
 
 import { motion } from "motion/react";
 
+const missionAnimation = {
+  initial: { opacity: 0, y: -20 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.8 },
+  viewport: { once: true },
+};
+
 const Mission = () => {
   return (
-    <div className="relative flex h-[60vh] w-full items-center justify-center overflow-hidden bg-white px-4 py-16 md:py-20">
+    <div className="relative flex h-[60vh] items-center justify-center overflow-hidden p-4">
       <Image
         src={gear1}
         alt="Decorative gear in the top left corner"
@@ -49,20 +56,17 @@ const Mission = () => {
         aria-hidden="true"
         className="pointer-events-none absolute top-1/2 right-0 z-0 block lg:hidden"
       />
-      <div className="relative z-10 mx-auto max-w-5xl text-center">
+      <div className="relative z-10 text-center md:w-4/5">
         <motion.div
-          initial={{ opacity: 0, y: -40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-bmes-blue-200 mb-4 text-3xl sm:text-4xl lg:text-5xl"
+          {...missionAnimation}
+          className="text-bmes-blue-200 mb-4 text-3xl md:text-5xl lg:text-6xl"
         >
           Mission Statement
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, y: -40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="pt-4 text-base leading-relaxed sm:text-lg md:text-xl lg:pt-6 lg:text-2xl"
+          {...missionAnimation}
+          transition={{ delay: 0.2 }}
+          className="pt-4 text-lg md:text-xl lg:pt-6 lg:text-2xl"
         >
           The Mission of the BMES is to build and support the biomedical
           engineering community, locally, nationally, and internationally, with
