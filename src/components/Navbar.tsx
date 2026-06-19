@@ -15,7 +15,11 @@ const Navbar = () => {
     <>
       <div className="bg-bmes-blue-100 flex items-center justify-between px-6 py-4 text-white">
         <div>
-          <Link href="/" className="flex items-center gap-2">
+          <Link
+            href="/"
+            className="flex items-center gap-2"
+            onClick={() => setIsOpen(false)}
+          >
             <Image src={BMES_logo} alt="BMES Logo" />
             <div className="flex flex-col text-sm md:text-lg">
               <span>BIOMEDICAL</span>

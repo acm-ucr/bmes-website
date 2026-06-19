@@ -10,7 +10,9 @@ interface EventProps {
 
 const EventCard = ({ name, description, date, location, time }: EventProps) => (
   <div className="mb-6 text-xl">
-    <div className="text-bmes-blue-300 text-4xl font-semibold">{name}</div>
+    <div className="text-bmes-blue-300 font-semibold md:text-2xl lg:text-3xl">
+      {name}
+    </div>
     <div className="text-bmes-blue-100">{description}</div>
     <div className="text-bmes-blue-100">When: {date}</div>
     <div className="text-bmes-blue-100">
