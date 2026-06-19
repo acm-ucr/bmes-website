@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "motion/react";
 import Link from "next/link";
 import { useState } from "react";
 import Image, { StaticImageData } from "next/image";
@@ -12,36 +13,49 @@ interface CardInfo {
   position: string;
   emailLink: string;
   about: string;
+  index: number;
 }
 
-const BoardCard = ({ name, image, position, emailLink, about }: CardInfo) => {
+const boardAnimation = {
+  initial: { y: 20, opacity: 0 },
+  whileInView: { y: 0, opacity: 1 },
+  transition: { duration: 0.8 },
+  viewport: { once: true },
+};
+
+const BoardCard = ({
+  name,
+  image,
+  position,
+  emailLink,
+  about,
+  index,
+}: CardInfo) => {
   const [showAbout, setShowAbout] = useState(false);
 
   return (
-    <div className="relative flex flex-col items-center text-center">
-      <Image
-        src={image}
-        alt={name}
-        width={192}
-        height={192}
-        className="h-48 w-48 object-cover"
-      />
+    <motion.div
+      {...boardAnimation}
+      transition={{ delay: (index % 4) * 0.1 }}
+      className="relative flex flex-col items-center text-center"
+    >
+      <Image src={image} alt={name} />
 
       <div className="mt-3 flex min-h-14 items-center justify-center px-2 text-2xl leading-tight text-black">
         {name}
       </div>
 
-      <div className="text-bmes-gray-100 mt-0 flex min-h-10 items-center justify-center px-2 text-lg leading-tight font-light uppercase">
+      <div className="text-bmes-gray-100 flex min-h-10 items-center justify-center px-2 text-lg leading-tight font-light uppercase">
         {position}
       </div>
 
-      <button
-        type="button"
+      <motion.div
         onClick={() => setShowAbout(true)}
-        className="border-bmes-blue-300 text-bmes-blue-300 mt-2 cursor-pointer rounded-xl border-2 px-4 py-2 text-xl font-light uppercase"
+        whileHover={{ scale: 1.1 }}
+        className="border-bmes-blue-300 text-bmes-blue-300 mt-3 cursor-pointer rounded-xl border-2 px-4 py-2 text-xl font-light uppercase"
       >
         About Me
-      </button>
+      </motion.div>
 
       {showAbout && (
         <div className="fixed inset-50 z-50">
@@ -49,14 +63,15 @@ const BoardCard = ({ name, image, position, emailLink, about }: CardInfo) => {
         </div>
       )}
 
-      <Link
-        href={emailLink}
-        aria-label={`Email ${name}`}
-        className="bg-bmes-blue-300 mt-4 flex items-center justify-center rounded-3xl p-4 shadow-md"
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        className="bg-bmes-blue-300 mt-4 flex items-center justify-center rounded-3xl p-4"
       >
-        <HiOutlineMail className="text-4xl text-white" />
-      </Link>
-    </div>
+        <Link href={emailLink}>
+          <HiOutlineMail className="text-4xl text-white" />
+        </Link>
+      </motion.div>
+    </motion.div>
   );
 };
 
