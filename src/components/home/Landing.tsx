@@ -9,7 +9,7 @@ import SmallGearLeft from "@/public/gears/small_left_gear.svg";
 import SmallTopGearRight from "@/public/gears/small_topright_gear.svg";
 import SmallBottomGearRight from "@/public/gears/small_bottomright_gear.svg";
 
-import SocialButton from "@/components/SocialButton";
+import SocialIcon from "../SocialIcon";
 
 const Landing = () => {
   return (
@@ -64,8 +64,8 @@ const Landing = () => {
         >
           @bmesatucr
         </Link>
-        <SocialButton
-          link="https://www.instagram.com/bmesatucr"
+        <SocialIcon
+          href="https://www.instagram.com/bmesatucr"
           icon={FaInstagram}
         />
       </div>
