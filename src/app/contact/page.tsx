@@ -9,8 +9,8 @@ const Contact = () => {
     <div>
       <Header title="Contact Us" image={contactHeader} />
       <GetInTouch />
-      <ContactForm />
       <FollowUs />
+      <ContactForm />
     </div>
   );
 };
