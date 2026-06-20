@@ -10,7 +10,7 @@ const visionAnimation = {
 
 const Vision = () => {
   return (
-    <div className="from-bmes-blue-300 to-bmes-blue-200 flex h-[100vh] flex-col items-center justify-center gap-8 bg-linear-to-b px-6 text-center text-lg text-white md:h-[80vh] md:px-10 md:text-xl lg:text-2xl">
+    <div className="from-bmes-blue-300 to-bmes-blue-200 flex h-[60vh] min-h-fit flex-col items-center justify-center gap-8 bg-linear-to-b p-8 text-center text-lg text-white md:h-[80vh] md:px-10 md:text-xl lg:text-2xl">
       <motion.div
         {...visionAnimation}
         className="text-3xl md:text-5xl lg:text-6xl"
