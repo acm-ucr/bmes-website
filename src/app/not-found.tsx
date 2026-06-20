@@ -4,12 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";
 
-import gear404TopLeftLarge from "@/public/404-gears/404TopGearLarge.svg";
-import gear404BottomCenterLarge from "@/public/404-gears/404BottomGearLarge.svg";
-import gear404BottomRightLarge from "@/public/404-gears/404RightGearLarge.svg";
-import gear404TopLeftSmall from "@/public/404-gears/404TopGearSmall.svg";
-import gear404BottomCenterSmall from "@/public/404-gears/404BottomGearSmall.svg";
-import gear404BottomRightSmall from "@/public/404-gears/404RightGearSmall.svg";
+import gear404TopLeftLarge from "@/public/404/404TopGearLarge.svg";
+import gear404BottomCenterLarge from "@/public/404/404BottomGearLarge.svg";
+import gear404BottomRightLarge from "@/public/404/404RightGearLarge.svg";
+import gear404TopLeftSmall from "@/public/404/404TopGearSmall.svg";
+import gear404BottomCenterSmall from "@/public/404/404BottomGearSmall.svg";
+import gear404BottomRightSmall from "@/public/404/404RightGearSmall.svg";
 
 const NotFound = () => {
   return (

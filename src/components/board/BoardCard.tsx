@@ -49,13 +49,15 @@ const BoardCard = ({
         {position}
       </div>
 
-      <motion.div
-        onClick={() => setShowAbout(true)}
-        whileHover={{ scale: 1.1 }}
-        className="border-bmes-blue-300 text-bmes-blue-300 mt-3 cursor-pointer rounded-xl border-2 px-4 py-2 text-xl font-light uppercase"
-      >
-        About Me
-      </motion.div>
+      {about && (
+        <motion.div
+          onClick={() => setShowAbout(true)}
+          whileHover={{ scale: 1.1 }}
+          className="border-bmes-blue-300 text-bmes-blue-300 mt-3 cursor-pointer rounded-xl border-2 px-4 py-2 text-xl font-light uppercase"
+        >
+          About Me
+        </motion.div>
+      )}
 
       {showAbout && (
         <div className="fixed inset-50 z-50">
@@ -63,14 +65,16 @@ const BoardCard = ({
         </div>
       )}
 
-      <motion.div
-        whileHover={{ scale: 1.1 }}
-        className="bg-bmes-blue-300 mt-4 flex items-center justify-center rounded-3xl p-4"
-      >
-        <Link href={emailLink}>
-          <HiOutlineMail className="text-4xl text-white" />
-        </Link>
-      </motion.div>
+      {emailLink && (
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          className="bg-bmes-blue-300 mt-4 flex items-center justify-center rounded-3xl p-4"
+        >
+          <Link href={emailLink}>
+            <HiOutlineMail className="text-4xl text-white" />
+          </Link>
+        </motion.div>
+      )}
     </motion.div>
   );
 };
