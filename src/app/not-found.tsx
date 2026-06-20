@@ -1,36 +1,66 @@
+"use client";
+
 import Link from "next/link";
-import gear_1 from "@/public/404-gears/gear-1.svg";
-import gear_2 from "@/public/404-gears/gear-2.svg";
-import gear_3 from "@/public/404-gears/gear-3.svg";
 import Image from "next/image";
+import { motion } from "motion/react";
+
+import gear404TopLeftLarge from "@/public/404-gears/404TopGearLarge.svg";
+import gear404BottomCenterLarge from "@/public/404-gears/404BottomGearLarge.svg";
+import gear404BottomRightLarge from "@/public/404-gears/404RightGearLarge.svg";
+import gear404TopLeftSmall from "@/public/404-gears/404TopGearSmall.svg";
+import gear404BottomCenterSmall from "@/public/404-gears/404BottomGearSmall.svg";
+import gear404BottomRightSmall from "@/public/404-gears/404RightGearSmall.svg";
 
 const NotFound = () => {
   return (
-    <>
-      <div className="relative -z-100 flex min-h-[87vh] flex-col items-center justify-center">
-        <Image src={gear_1} alt="gear" className="absolute top-0 left-0 z-0" />
-        <Image
-          src={gear_2}
-          alt="gear"
-          className="absolute right-1/2 bottom-0 z-0"
-        />
-        <Image
-          src={gear_3}
-          alt="gear"
-          className="absolute right-0 bottom-0 z-0"
-        />
-        <div className="relative z-10 flex flex-col items-center">
-          <p className="text-bmes-blue-200 mb-2 text-9xl font-bold">404</p>
-          <p className="mb-2 text-3xl font-light">Page Not Found</p>
-          <Link
-            href="/"
-            className="bg-bmes-blue-300 rounded-2xl px-4 py-2 text-white shadow-lg"
-          >
-            Return Home
-          </Link>
-        </div>
+    <div className="relative flex min-h-[87vh] flex-col items-center justify-center overflow-hidden">
+      <Image
+        src={gear404TopLeftSmall}
+        alt="Decorative gear"
+        className="absolute top-0 left-0 -z-10 md:hidden"
+      />
+
+      <Image
+        src={gear404BottomCenterSmall}
+        alt="Decorative gear"
+        className="absolute bottom-0 -z-10 mr-8 md:hidden"
+      />
+
+      <Image
+        src={gear404BottomRightSmall}
+        alt="Decorative gear"
+        className="absolute right-0 bottom-0 -z-10 md:hidden"
+      />
+
+      <Image
+        src={gear404TopLeftLarge}
+        alt="Decorative gear"
+        className="absolute top-0 left-0 -z-10 hidden md:block"
+      />
+
+      <Image
+        src={gear404BottomCenterLarge}
+        alt="Decorative gear"
+        className="absolute right-3/4 bottom-0 -z-10 hidden md:block"
+      />
+
+      <Image
+        src={gear404BottomRightLarge}
+        alt="Decorative gear"
+        className="absolute right-0 bottom-0 -z-10 hidden md:block"
+      />
+
+      <div className="flex flex-col items-center gap-2">
+        <div className="text-bmes-blue-200 text-9xl font-bold">404</div>
+        <div className="text-3xl font-light">Page Not Found</div>
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          className="bg-bmes-blue-300 mt-8 rounded-3xl p-5 text-white shadow-lg"
+        >
+          <Link href="/">Return Home</Link>
+        </motion.div>
       </div>
-    </>
+    </div>
   );
 };
 
