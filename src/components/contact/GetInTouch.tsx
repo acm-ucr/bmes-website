@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";
-import GetInTouchImg from "@/public/getInTouch.webp";
+import GetInTouchImg from "@/public/contact/getInTouch.webp";
 
 const touchAnimation = {
   initial: { x: 30, opacity: 0 },

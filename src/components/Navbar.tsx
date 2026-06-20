@@ -4,7 +4,7 @@ import { navigations } from "@/data/navigation";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import BMES_logo from "@/public/BMES_logo.svg";
+import BMES_logo from "@/public/largeBMES.svg";
 import { IoMdMenu } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
 import { usePathname } from "next/navigation";

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { footerIcons } from "@/data/footer";
-import Logo from "@/public/bmes-logo.svg";
+import Logo from "@/public/smallBMES.svg";
 
 const Footer = () => {
   return (
