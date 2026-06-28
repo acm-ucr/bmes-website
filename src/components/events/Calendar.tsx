@@ -49,7 +49,6 @@ const Calendar = () => {
 
   useEffect(() => {
     const fetchCalendarEvents = async () => {
-
       const url = ``;
 
       try {
@@ -123,7 +122,10 @@ const Calendar = () => {
 
   return (
     <div className="from-bmes-blue-300 to-bmes-blue-200 bg-linear-to-b p-8 text-center text-lg text-white md:px-10 md:text-xl lg:text-2xl">
-      <motion.div {...eventAnimation} className="relative m-16 mx-auto w-full max-w-6xl rounded-2xl bg-white p-4 shadow-xl md:p-6">
+      <motion.div
+        {...eventAnimation}
+        className="relative m-16 mx-auto w-full max-w-6xl rounded-2xl bg-white p-4 shadow-xl md:p-6"
+      >
         <div className="mb-4 flex items-center justify-between text-gray-800">
           <button
             onClick={() => changeMonth(-1)}
@@ -147,7 +149,7 @@ const Calendar = () => {
 
         <div className="mb-2 border-t border-gray-100" />
 
-        <div className="grid grid-cols-7 text-center text-xs text-bmes-gray-100 md:text-sm">
+        <div className="text-bmes-gray-100 grid grid-cols-7 text-center text-xs md:text-sm">
           {WEEKDAYS.map((day) => (
             <div key={day} className="py-2">
               {day}
@@ -166,7 +168,7 @@ const Calendar = () => {
             return (
               <div
                 key={key}
-                className={`flex min-h-20 text-center justify-center flex-col rounded-lg p-2 md:min-h-22 ${
+                className={`flex min-h-20 flex-col justify-center rounded-lg p-2 text-center md:min-h-22 ${
                   inMonth ? "text-gray-800" : "text-gray-300"
                 } ${isToday ? "border-2 border-gray-800" : ""} ${
                   isWeekend && inMonth ? "bg-bmes-gray-200" : ""
@@ -178,7 +180,7 @@ const Calendar = () => {
                     <button
                       key={event.id}
                       onClick={() => setSelected(event)}
-                      className="truncate rounded bg-bmes-blue-300 px-1 py-0.5 text-left text-xs text-white"
+                      className="bg-bmes-blue-300 truncate rounded px-1 py-0.5 text-left text-xs text-white"
                     >
                       {event.name}
                     </button>
@@ -190,7 +192,7 @@ const Calendar = () => {
         </div>
 
         {selected && (
-          <div className="absolute top-1/2 left-1/2 z-10 w-72 max-w-[90%] -translate-x-1/2 -translate-y-1/2 rounded-lg border border-bmes-gray-200 bg-white p-4 shadow-xl">
+          <div className="border-bmes-gray-200 absolute top-1/2 left-1/2 z-10 w-72 max-w-[90%] -translate-x-1/2 -translate-y-1/2 rounded-lg border bg-white p-4 shadow-xl">
             <div className="flex items-start justify-between">
               <h4 className="font-bold text-gray-800">{selected.name}</h4>
               <button
@@ -215,7 +217,7 @@ const Calendar = () => {
               href={selected.rsvpUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-3 inline-block rounded border border-bmes-gray-100 bg-bmes-blue-300 px-4 py-1 text-sm text-white transition-colors hover:bg-bmes-blue-400"
+              className="border-bmes-gray-100 bg-bmes-blue-300 hover:bg-bmes-blue-400 mt-3 inline-block rounded border px-4 py-1 text-sm text-white transition-colors"
             >
               RSVP
             </Link>
