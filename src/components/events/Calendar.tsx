@@ -49,10 +49,18 @@ const Calendar = () => {
 
   useEffect(() => {
     const fetchCalendarEvents = async () => {
-      const url = ``;
+      const url = new URL(
+        `https://www.googleapis.com/calendar/v3/calendars/${process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL!}/events`,
+      );
+      url.searchParams.set(
+        "key",
+        process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY!,
+      );
+      url.searchParams.set("singleEvents", "true");
+      url.searchParams.set("orderBy", "startTime");
 
       try {
-        const response = await fetch(url);
+        const response = await fetch(url.toString());
         const data = await response.json();
 
         if (!data.items) return;
