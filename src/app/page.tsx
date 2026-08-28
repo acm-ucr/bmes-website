@@ -1,7 +1,17 @@
+import Header from "@/components/Header";
+import homeHeader from "@/public/headers/homeHeader.webp"
+import mobileHeader from "@/public/mobileHeaders/mobileHome.webp";
+import Landing from "@/components/home/Landing";
+
 const Home = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      Hello World
+    <div>
+      <Header
+        title="BIOMEDICAL ENGINEERING SOCIETY AT UCR"
+        image={homeHeader}
+        mobileImage={mobileHeader}
+      />
+      <Landing />
     </div>
   );
 };
