@@ -14,7 +14,7 @@ const socialAnimation = {
 
 const FollowMap = () => {
   return (
-    <div className="flex h-[25vh] min-h-fit flex-col items-center gap-8 py-8">
+    <div className="flex min-h-fit flex-col items-center gap-8">
       <div className="text-bmes-blue-200 text-center text-3xl md:text-4xl lg:text-5xl">
         Follow us on
       </div>

@@ -71,7 +71,7 @@ const AboutProgram = () => {
       <motion.div
         {...fadeInAnimation}
         transition={{ delay: 0.2 }}
-        className="z-10 w-3/5 text-lg text-black"
+        className="z-10 text-lg text-black lg:w-3/5"
       >
         The Bioengineering Mentorship Program was established in conjunction
         with the{" "}
@@ -100,7 +100,7 @@ const AboutProgram = () => {
 
       <motion.div
         {...fadeInAnimation}
-        transition={{ delay: 0.6 }}
+        transition-transform={{ delay: 0.6 }}
         className="bg-bmes-blue-300 z-10 rounded-xl px-6 py-3 text-xl font-bold text-white underline shadow-md transition hover:scale-105 md:px-10 md:py-4 md:text-2xl"
       >
         <Link

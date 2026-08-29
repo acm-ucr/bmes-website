@@ -12,6 +12,7 @@ interface HeaderProps {
 
 const Header = ({ title, image, mobileImage, subtitle }: HeaderProps) => {
   const page = usePathname();
+
   return (
     <div className="pointer-events-none relative">
       <Image src={image} alt={title} className="hidden w-full md:block" />

@@ -21,7 +21,7 @@ const eventAnimation = {
 
 const Upcoming = () => {
   return (
-    <div className="relative overflow-hidden py-8 lg:h-[65vh]">
+    <div className="relative flex justify-center overflow-hidden py-8 lg:h-[65vh]">
       <div className="flex h-full flex-col items-center justify-around md:gap-6 lg:w-5/6 lg:flex-row lg:place-self-center">
         <div className="text-bmes-blue-200 text-5xl">
           <motion.div {...eventAnimation}>Upcoming Events</motion.div>
