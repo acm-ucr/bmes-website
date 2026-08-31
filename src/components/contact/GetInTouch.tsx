@@ -14,7 +14,7 @@ const touchAnimation = {
 
 const GetInTouch = () => {
   return (
-    <div className="flex w-11/12 flex-col items-center justify-center gap-8 place-self-center rounded-2xl bg-white p-6 sm:p-8 md:flex-row md:gap-12 md:p-10">
+    <div className="mx-auto flex w-11/12 flex-col items-center justify-center gap-8 place-self-center rounded-2xl bg-white p-6 sm:p-8 md:flex-row md:gap-12 md:p-10">
       <div className="flex flex-col gap-4 py-6 text-center md:w-1/2 md:text-left">
         <motion.div
           {...touchAnimation}
